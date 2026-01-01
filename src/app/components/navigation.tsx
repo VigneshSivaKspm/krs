@@ -50,7 +50,7 @@ export function Navigation() {
             className="flex flex-col items-start transition-colors"
           >
             <div className="flex items-baseline">
-              <span className="text-2xl sm:text-3xl font-black leading-none">
+               <span className="text-2xl sm:text-3xl font-black leading-none">
                 <span className="text-red-700">K</span>
                 <span className="text-yellow-500">R</span>
                 <span className="text-red-700">S</span>
@@ -60,6 +60,9 @@ export function Navigation() {
               </div>
             </div>
           </button>
+
+          {/* Center Flag */}
+          <img src="/assets/flag.png" alt="Flag" className="h-12 sm:h-16 w-auto" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 lg:gap-2">

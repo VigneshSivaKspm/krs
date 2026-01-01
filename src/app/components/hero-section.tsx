@@ -17,11 +17,7 @@ export function HeroSection() {
             
             {/* Flag and Text Image */}
             <div className="flex flex-col items-center lg:items-start gap-3 sm:gap-4">
-              <img 
-                src="/assets/flag.png" 
-                alt="Flag" 
-                className="h-12 sm:h-16 w-auto object-contain drop-shadow-lg"
-              />
+             
               <div className="bg-white px-4 sm:px-6 py-1 sm:py-2 rounded-lg">
                 <img 
                   src="/assets/text.png" 
