@@ -1,32 +1,6 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    }, 3000);
-  };
-
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,8 +24,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Phone</h4>
-                    <p className="text-white/70 text-sm sm:text-base">+91 98765 43210</p>
-                    <p className="text-white/70 text-sm sm:text-base">+91 97531 24680</p>
+                    <p className="text-white/70 text-sm sm:text-base">+91 86676 70083</p>
                   </div>
                 </div>
 
@@ -73,9 +46,9 @@ export function ContactSection() {
                   <div>
                     <h4 className="text-white font-bold mb-1">Office Address</h4>
                     <p className="text-white/70 text-sm sm:text-base">
-                      TVK District Office,<br />
-                      Main Road, Ariyalur,<br />
-                      Tamil Nadu - 621704
+                      Near Bus Stop, Kasipalayam Main Road,<br />
+                      Kasipalayam, Gobichettipalayam,<br />
+                      638454, Erode
                     </p>
                   </div>
                 </div>
@@ -100,102 +73,6 @@ export function ContactSection() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-neutral-950 border-2 border-neutral-800 p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">Send a Message</h3>
-            
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="w-16 h-16 bg-yellow-500 flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-black" />
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Thank You!</h4>
-                <p className="text-white/70">Your message has been sent successfully.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-white/80 text-sm mb-2">Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 outline-none transition-colors"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white/80 text-sm mb-2">Email *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 outline-none transition-colors"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-white/80 text-sm mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 outline-none transition-colors"
-                      placeholder="+91 98765 43210"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white/80 text-sm mb-2">Subject *</label>
-                    <select
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 outline-none transition-colors"
-                    >
-                      <option value="">Select Subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="support">Request Support</option>
-                      <option value="complaint">File Complaint</option>
-                      <option value="volunteer">Volunteer</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-white/80 text-sm mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 outline-none transition-colors resize-none"
-                    placeholder="Write your message here..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-red-700 hover:bg-red-700 text-white font-bold py-3 sm:py-4 flex items-center justify-center gap-2 transition-colors"
-                >
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </div>

@@ -27,8 +27,9 @@ export function Navigation() {
 
   const navItems = [
     { label: "Home", action: scrollToTop },
-    { label: "Service", id: "service" },
-    { label: "Gallery", id: "gallery" },
+    { label: "Vijay", id: "vijay" },
+    { label: "Key Leaders", id: "key-leaders" },
+    { label: "Leadership", id: "leadership" },
     { label: "Contact", id: "contact" },
   ];
 

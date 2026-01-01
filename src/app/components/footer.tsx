@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Facebook, Twitter, Instagram, Youtube, ArrowUp, Heart } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, ArrowUp } from "lucide-react";
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
@@ -10,8 +10,9 @@ const socialLinks = [
 
 const quickLinks = [
   { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Vijay", href: "#vijay" },
+  { label: "Key Leaders", href: "#key-leaders" },
+  { label: "Leadership", href: "#leadership" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -45,12 +46,21 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-red-700 flex items-center justify-center">
-                <span className="text-xl font-black text-white">KRS</span>
+              <div className="w-12 h-12 bg-red-700 flex items-center justify-center overflow-hidden rounded">
+                <img
+                  src="/assets/saravanan.png"
+                  alt="K.R. Saravanan"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.style.display = "none";
+                    img.parentElement!.innerHTML = '<span class="text-xl font-black text-white">KRS</span>';
+                  }}
+                />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">K.R. SARAVANAN</h3>
-                <p className="text-sm text-yellow-500">TVK Ariyalur</p>
+                <p className="text-sm text-yellow-500">TVK</p>
               </div>
             </div>
             <p className="text-white/60 text-sm mb-6">
@@ -141,12 +151,18 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-sm text-center sm:text-left">
-              © {new Date().getFullYear()} K.R. Saravanan | TVK Ariyalur. All rights reserved.
+              ©  {new Date().getFullYear()} All rights reserved.
             </p>
             <div className="flex items-center gap-2 text-white/50 text-sm">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-700 fill-red-700" />
-              <span>for the People</span>
+              <span>Crafted By</span>
+              <a
+                href="https://legendaryoneagency.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors"
+              >
+                Legendary One
+              </a>
             </div>
           </div>
         </div>
