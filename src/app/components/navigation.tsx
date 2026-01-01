@@ -27,9 +27,10 @@ export function Navigation() {
 
   const navItems = [
     { label: "Home", action: scrollToTop },
-    { label: "Vijay", id: "vijay" },
-    { label: "Key Leaders", id: "key-leaders" },
-    { label: "Leadership", id: "leadership" },
+    { label: "Key Leaders", id: "leaders" },
+    { label: "Ideology", id: "ideology" },
+    { label: "Leadership", id: "leadership-committee" },
+    { label: "Executive", id: "executive-committee" },
     { label: "Contact", id: "contact" },
   ];
 

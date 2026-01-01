@@ -4,8 +4,18 @@ import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "./ui/carousel";
 import { Phone, ShieldCheck } from "lucide-react";
 const leadershipMembers = [
-  {
+    {
     id: 1,
+    role: "இணைச் செயலாளர்",
+    englishRole: "Joint Secretary",
+    name: "கே. விஜயன்",
+    englishName: "K. Vijayan",
+    address: "Central Wing, Administration Block",
+    phone: "+91 9876543402",
+    image: "/leadership/joint-sec.jpg",
+  },
+  {
+    id: 2,
     role: "துணைச் செயலாளர்",
     englishRole: "Deputy Secretary",
     name: "சி. ரமேஷ்",
@@ -15,7 +25,7 @@ const leadershipMembers = [
     image: "/leadership/deputy-2.jpg",
   },
   {
-    id: 2,
+    id: 3,
     role: "துணைச் செயலாளர்",
     englishRole: "Deputy Secretary",
     name: "மு. பாஸ்கர்",
@@ -24,16 +34,7 @@ const leadershipMembers = [
     phone: "+91 9876543403",
     image: "/leadership/deputy-1.jpg",
   },
-  {
-    id: 3,
-    role: "இணைச் செயலாளர்",
-    englishRole: "Joint Secretary",
-    name: "கே. விஜயன்",
-    englishName: "K. Vijayan",
-    address: "Central Wing, Administration Block",
-    phone: "+91 9876543402",
-    image: "/leadership/joint-sec.jpg",
-  },
+  
   {
     id: 4,
     role: "பொருளாளர்",

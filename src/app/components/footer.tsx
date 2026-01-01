@@ -10,9 +10,10 @@ const socialLinks = [
 
 const quickLinks = [
   { label: "Home", href: "#" },
-  { label: "Vijay", href: "#vijay" },
-  { label: "Key Leaders", href: "#key-leaders" },
-  { label: "Leadership", href: "#leadership" },
+  { label: "Key Leaders", href: "#leaders" },
+  { label: "Ideology", href: "#ideology" },
+  { label: "Leadership", href: "#leadership-committee" },
+  { label: "Executive", href: "#executive-committee" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -121,28 +122,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-4 pb-2 border-b-2 border-yellow-500">
-              Stay Updated
-            </h4>
-            <p className="text-white/60 text-sm mb-4">
-              Subscribe to receive updates on events and initiatives.
-            </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full bg-black border-2 border-neutral-700 focus:border-red-700 text-white px-4 py-3 text-sm outline-none transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full bg-yellow-500 hover:bg-yellow-500 text-black font-bold py-3 text-sm transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          
         </div>
       </div>
 

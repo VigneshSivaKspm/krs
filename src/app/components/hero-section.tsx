@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-20 lg:pb-32">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-12 lg:pb-16">
       {/* Premium Background */}
       <div className="absolute inset-0 z-0">
         {/* Animated gradient blobs */}
@@ -22,27 +22,25 @@ export function HeroSection() {
                 alt="Flag" 
                 className="h-12 sm:h-16 w-auto object-contain drop-shadow-lg"
               />
-              <img 
-                src="/assets/text.png" 
-                alt="Text" 
-                className="h-16 sm:h-20 w-auto object-contain drop-shadow-lg"
-              />
-            </div>
-
-            {/* Tagline */}
-            <div className="space-y-2 sm:space-y-4">
-              <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
-                ஆட்சி அல்ல, அர்ப்பணிப்பு
-              </h2>
-              <p className="text-sm sm:text-xl text-gray-300 font-light">
-                Governance is Not Power, It is Responsibility
-              </p>
+              <div className="bg-white px-4 sm:px-6 py-1 sm:py-2 rounded-lg">
+                <img 
+                  src="/assets/text.png" 
+                  alt="Text" 
+                  className="h-16 sm:h-20 w-auto object-contain"
+                />
+              </div>
             </div>
 
             
 
             
           </div>
+  {/* Position Badge */}
+            <div className="pt-2 sm:pt-4 flex justify-center">
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2 bg-red-700 rounded">
+                <span className="text-sm sm:text-base text-white font-semibold">Town Panchayat Secretary</span>
+              </div>
+            </div>
 
           {/* Right Image & Name Section */}
           <div className="flex-1 flex flex-col items-center justify-center gap-4 sm:gap-8">
@@ -51,24 +49,16 @@ export function HeroSection() {
               {/* Background glow */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/20 to-yellow-500/20 blur-2xl"></div>
               
+              
               {/* Image */}
               <img 
                 src="/assets/saravanan.png"
                 alt="K.R.Saravanan"
                 className="relative w-full h-full object-cover rounded-full border-2 border-red-600/30 shadow-2xl"
               />
-              
-              {/* Vignette */}
-              <div className="absolute inset-0 rounded-full shadow-[inset_0_0_70px_rgba(0,0,0,0.6)]"></div>
             </div>
 
-            {/* Position Badge */}
-            <div className="pt-2 sm:pt-4 flex justify-center">
-              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-3 rounded-full border border-red-600/40 bg-red-600/5 backdrop-blur-md">
-                <span className="text-sm sm:text-base text-red-400 font-medium">Town Panchayat Secretary</span>
-              </div>
-            </div>
-
+          
             {/* Name - KRS Format Below Image */}
             <div className="space-y-2 sm:space-y-3 text-center">
               <div className="flex flex-row items-center justify-center gap-8 sm:gap-16">
@@ -93,6 +83,16 @@ export function HeroSection() {
                   <span className="text-xs text-gray-400 font-medium">Saravanakumar</span>
                 </div>
               </div>
+            </div>
+
+            {/* Tagline */}
+            <div className="space-y-2 sm:space-y-4 text-center lg:text-center">
+              <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
+                ஆட்சி அல்ல, அர்ப்பணிப்பு
+              </h2>
+              <p className="text-sm sm:text-xl text-gray-300 font-light">
+                Governance is Not Power, It is Responsibility
+              </p>
             </div>
           </div>
         </div>

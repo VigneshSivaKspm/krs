@@ -7,24 +7,28 @@ export function VijaySection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
-          <div className="max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              A Leader, <span className="text-red-700">An Inspiration</span>
-            </h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl text-yellow-500 mb-8 sm:mb-12 font-bold">
-              Thalapathy Vijay
-            </h3>
-{/* Right Image */}
-          <div className="flex items-center justify-center">
-            <img
-              src="/assets/vijay.png"
-              alt="Thalapathy Vijay"
-              className="w-full max-w-sm lg:max-w-md h-auto object-contain"
-            />
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left Column - Image with heading */}
+          <div className="space-y-6 sm:space-y-8">
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                A Leader,<br /> <span className="text-red-700">An Inspiration</span>
+              </h2>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl text-yellow-500 mb-8 sm:mb-12 font-bold">
+                Thalapathy Vijay
+              </h3>
+            </div>
+            <div className="flex items-center justify-center lg:sticky lg:top-20">
+              <img
+                src="/assets/vijay.png"
+                alt="Thalapathy Vijay"
+                className="w-full max-w-sm lg:max-w-md h-auto object-contain"
+              />
+            </div>
           </div>
-            <div className="space-y-6 sm:space-y-8 text-white">
+
+          {/* Right Column - Content */}
+          <div className="space-y-6 sm:space-y-8 text-white">
               <div className="p-4 sm:p-6 bg-black border-2 border-neutral-800">
                 <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-red-700 font-bold">Early Life</h4>
                 <ul className="space-y-2 text-base sm:text-lg text-white/80">
@@ -51,7 +55,7 @@ export function VijaySection() {
                 </ul>
               </div>
 
-              <div className="bg-black border-l-4 border-yellow-500 p-4 sm:p-6 mt-8 sm:mt-12">
+              <div className="bg-black border-l-4 border-yellow-500 p-4 sm:p-6">
                 <p className="text-lg sm:text-xl md:text-2xl mb-2 text-white">
                   எல்லா ஆட்சியும் மக்கள் நலனுக்காகவே இருக்க வேண்டும்
                 </p>
@@ -61,10 +65,7 @@ export function VijaySection() {
               </div>
             </div>
           </div>
-
-          
         </div>
-      </div>
     </section>
   );
 }

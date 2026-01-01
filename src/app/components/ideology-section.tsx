@@ -34,7 +34,7 @@ export function IdeologySection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
-            Kolgai – <span className="text-red-700">Our Guiding Principles</span>
+            கொள்கை <br /> <span className="text-red-700">Our Guiding Principles</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
         </div>
