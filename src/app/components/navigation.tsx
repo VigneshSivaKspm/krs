@@ -123,19 +123,28 @@ export function Navigation() {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:text-yellow-500 hover:bg-transparent z-60"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </Button>
+          {/* Mobile Login (visible) and Menu Button */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Link
+              to="/login"
+              onClick={closeMobile}
+              className="px-3 py-1 text-sm text-white hover:text-yellow-500 transition-colors font-medium"
+            >
+              Login
+            </Link>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:text-yellow-500 hover:bg-transparent z-60"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation (absolute overlay so it doesn't change header height) */}

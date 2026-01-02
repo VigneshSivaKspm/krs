@@ -1,7 +1,7 @@
 export function HeroSection() {
   return (
     <section 
-      className="relative w-full overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-12 lg:pb-16"
+      className="relative w-full overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black pt-8 sm:pt-10 lg:pt-12 pb-6 sm:pb-12 lg:pb-16"
       aria-label="K.R. Saravanakumar - TVK Town Panchayat Secretary Introduction"
       itemScope
       itemType="https://schema.org/Person"

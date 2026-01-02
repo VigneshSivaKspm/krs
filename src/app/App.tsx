@@ -11,11 +11,14 @@ import { Footer } from "./components/footer";
 import { WhatsAppFloatingButton } from "./components/whatsapp-floating-button";
 import ReportFloatingButton from "./components/report-floating-button";
 import { SEOContent, useSEO } from "./components/seo";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import ReportForm from "./pages/ReportForm";
+import { Routes, Route } from "react-router-dom";
 
-export default function App() {
-  // Initialize SEO
+function Home() {
   useSEO();
-  
+
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Hidden SEO Content for Search Engines */}
@@ -26,7 +29,6 @@ export default function App() {
       <IdeologySection />
       <LeadershipCommitteeSection />
       <ExecutiveCommitteeSection />
-    
       <WardSecretariesSection />
       <div id="contact">
         <ContactSection />
@@ -35,5 +37,16 @@ export default function App() {
       <ReportFloatingButton />
       <WhatsAppFloatingButton />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/report" element={<ReportForm />} />
+    </Routes>
   );
 }
