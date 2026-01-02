@@ -57,8 +57,7 @@ export function ReportFloatingButton(){
             }}
           />
             <aside className={`relative right-0 top-0 h-full w-[92%] sm:w-96 bg-black text-white shadow-2xl p-4 overflow-auto transform transition-transform duration-300 z-[9998] ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <div className="flex items-center justify-between mb-4">
-              <div className="text-lg font-semibold">Report</div>
+            <div className="flex items-center justify-end mb-4">
               <button onClick={() => {
                 setIsOpen(false);
                 setTimeout(() => setShowDrawer(false), 300);

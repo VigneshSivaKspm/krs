@@ -97,22 +97,27 @@ export function Navigation() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo/Brand */}
-          <a
-            href="/"
-            onClick={closeMobile}
-            className="flex flex-col items-start transition-colors"
-          >
-            <div className="flex items-baseline">
-               <span className="text-xl sm:text-3xl font-black leading-none">
-                <span className="text-red-700">K</span>
-                <span className="text-yellow-500">R</span>
-                <span className="text-red-700">S</span>
-              </span>
-              <div className="text-xs sm:text-sm font-bold text-white tracking-wider">
-                aravanakumar
+
+            {/* Mobile Menu Button (now shown on all sizes to match mobile header) */}
+            <MobileAuthArea isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} closeMobile={closeMobile} />
+
+            {/* Logo/Brand */}
+            <a
+              href="/"
+              onClick={closeMobile}
+              className="flex flex-col items-start transition-colors ml-2"
+            >
+              <div className="flex items-baseline">
+                 <span className="text-xl sm:text-3xl font-black leading-none">
+                  <span className="text-red-700">K</span>
+                  <span className="text-yellow-500">R</span>
+                  <span className="text-red-700">S</span>
+                </span>
+                <div className="text-xs sm:text-sm font-bold text-white tracking-wider">
+                  aravanakumar
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
 
           {/* Center Flag */}
           <img src="/assets/flag.png" alt="Flag" className="h-8 sm:h-16 w-auto object-contain" />
@@ -120,12 +125,11 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <HeaderAuthArea navItems={navItems} isInstallable={isInstallable} handleInstallClick={handleInstallClick} closeMobile={closeMobile} />
 
-          {/* Mobile Menu Button (drawer contains auth actions) */}
-          <MobileAuthArea isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} closeMobile={closeMobile} />
+          
         </div>
 
         {/* Mobile Navigation (absolute overlay so it doesn't change header height) */}
-        <div className={`md:hidden absolute left-0 right-0 top-full z-40 transition-all duration-200 ${isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+        <div className={`absolute left-0 right-0 top-full z-40 transition-all duration-200 ${isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
           <div className="w-full bg-black border-t border-red-700 shadow-xl">
             {navItems.map((item) => (
               <a
@@ -177,7 +181,7 @@ function HeaderAuthArea({ navItems, isInstallable, handleInstallClick, closeMobi
   };
 
   return (
-    <div className="hidden md:flex items-center gap-2 lg:gap-4">
+    <div className="hidden">
       {navItems.map((item) => (
         <a key={item.label} href={item.href} onClick={closeMobile} className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">{item.label}</a>
       ))}
@@ -198,9 +202,9 @@ function HeaderAuthArea({ navItems, isInstallable, handleInstallClick, closeMobi
   );
 }
 
-function MobileAuthArea({ isMobileMenuOpen, setIsMobileMenuOpen }:{isMobileMenuOpen:boolean, setIsMobileMenuOpen: (v:boolean)=>void, closeMobile:()=>void}){
+function MobileAuthArea({ isMobileMenuOpen, setIsMobileMenuOpen }:{isMobileMenuOpen:boolean, setIsMobileMenuOpen: (v:boolean)=>void, closeMobile?:()=>void}){
   return (
-    <div className="md:hidden">
+    <div className="flex">
       <Button variant="ghost" size="icon" className="text-yellow-400 hover:text-yellow-300 bg-black/20 hover:bg-white/5 z-60" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu">
         {isMobileMenuOpen ? (<X className="w-6 h-6" />) : (<Menu className="w-6 h-6" />)}
       </Button>
