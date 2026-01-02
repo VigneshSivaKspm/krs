@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { X, ChevronLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import ReportForm from "../pages/ReportForm";
 
@@ -18,11 +18,17 @@ export function ReportFloatingButton(){
     <>
       <button
         onClick={()=>setIsOpen(true)}
-        className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 w-8 h-36 bg-gradient-to-l from-red-600 to-yellow-500 text-white rounded-none flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+        className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 w-6 h-36 text-white rounded-none shadow-lg hover:scale-105 transition-transform overflow-hidden"
         title="Report an issue / submit request"
         aria-label="Open report drawer"
       >
-        <span className={`text-xl font-black leading-none transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>&gt;</span>
+        <div className="w-full h-full flex flex-col">
+          <div className="h-1/4 bg-red-600" />
+          <div className="h-1/2 bg-yellow-400 flex items-center justify-center">
+            <ChevronLeft strokeWidth={2.5} className={`w-5 h-5 transform transition-transform duration-200 text-black ${isOpen ? 'rotate-180' : ''}`} />
+          </div>
+          <div className="h-1/4 bg-red-600" />
+        </div>
       </button>
 
       {isOpen && (
