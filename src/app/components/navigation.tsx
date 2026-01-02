@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -12,6 +13,7 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,42 +56,36 @@ export function Navigation() {
     setDeferredPrompt(null);
   };
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
-  };
+  const closeMobile = () => setIsMobileMenuOpen(false);
 
   const navItems = [
-    { label: "Home", action: scrollToTop },
-    { label: "Key Leaders", id: "leaders" },
-    { label: "Ideology", id: "ideology" },
-    { label: "Leadership", id: "leadership-committee" },
-    { label: "Executive", id: "executive-committee" },
-    { label: "Contact", id: "contact" },
+    { label: "Home", href: "/" },
+    { label: "Key Leaders", href: "/#leaders" },
+    { label: "Ideology", href: "/#ideology" },
+    { label: "Leadership", href: "/#leadership-committee" },
+    { label: "Executive", href: "/#executive-committee" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-16 sm:h-20 transition-all duration-300 ${
         isScrolled
           ? "bg-black border-b-2 border-red-700"
           : "bg-black/95"
       }`}
+      style={{backdropFilter: 'saturate(120%) blur(6px)'}}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo/Brand */}
-          <button
-            onClick={scrollToTop}
+          <a
+            href="/"
+            onClick={closeMobile}
             className="flex flex-col items-start transition-colors"
           >
             <div className="flex items-baseline">
-               <span className="text-2xl sm:text-3xl font-black leading-none">
+               <span className="text-xl sm:text-3xl font-black leading-none">
                 <span className="text-red-700">K</span>
                 <span className="text-yellow-500">R</span>
                 <span className="text-red-700">S</span>
@@ -98,22 +94,24 @@ export function Navigation() {
                 aravanakumar
               </div>
             </div>
-          </button>
+          </a>
 
           {/* Center Flag */}
-          <img src="/assets/flag.png" alt="Flag" className="h-12 sm:h-16 w-auto" />
+          <img src="/assets/flag.png" alt="Flag" className="h-8 sm:h-16 w-auto object-contain" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1 lg:gap-2">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.label}
-                onClick={() => item.id ? scrollToSection(item.id) : item.action?.()}
+                href={item.href}
+                onClick={closeMobile}
                 className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
+            <Link to="/login" className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">Login</Link>
             {isInstallable && (
               <Button
                 onClick={handleInstallClick}
@@ -129,7 +127,7 @@ export function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white hover:text-yellow-500 hover:bg-transparent"
+            className="md:hidden text-white hover:text-yellow-500 hover:bg-transparent z-60"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -140,18 +138,20 @@ export function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'}`}>
-          <div className="bg-black border-2 border-red-700">
+        {/* Mobile Navigation (absolute overlay so it doesn't change header height) */}
+        <div className={`md:hidden absolute left-0 right-0 top-full z-40 transition-all duration-200 ${isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+          <div className="w-full bg-black border-t border-red-700 shadow-xl">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.label}
-                onClick={() => item.id ? scrollToSection(item.id) : item.action?.()}
+                href={item.href}
+                onClick={closeMobile}
                 className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
+            <a href="/login" className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800">Login</a>
             {isInstallable && (
               <button
                 onClick={handleInstallClick}
@@ -167,3 +167,5 @@ export function Navigation() {
     </nav>
   );
 }
+
+export default Navigation;

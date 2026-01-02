@@ -1,0 +1,28 @@
+/* TEAM */
+Name: K.R. Saravanakumar
+Title: TVK Town Panchayat Secretary
+Location: Kasipalayam, Gobichettipalayam, Erode, Tamil Nadu, India
+Contact: +91 86676 70083
+Email: tvk.krsaravanan@gmail.com
+Website: https://krsaravanakumar.in
+
+/* SITE */
+Site Name: K.R. Saravanakumar Official Website
+URL: https://krsaravanakumar.in
+Description: Official website of K.R. Saravanakumar (KRS) - TVK Town Panchayat Secretary
+Language: Tamil, English
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: React, Vite, TailwindCSS
+Last Updated: 2026-01-02
+
+/* THANKS */
+Tamilaga Vettri Kazhagam (TVK)
+Thalapathy Vijay - Party Founder
+All supporters and well-wishers
+
+/* KEYWORDS */
+K.R. Saravanakumar, KRS, Saravanakumar, Saravanan
+சரவணகுமார், சரவணன், கே.ஆர். சரவணகுமார்
+TVK, Tamilaga Vettri Kazhagam, தமிழக வெற்றி கழகம்
+Kasipalayam, Gobichettipalayam, Erode, Tamil Nadu
+Town Panchayat Secretary, Political Leader

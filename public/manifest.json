@@ -1,12 +1,36 @@
 {
-  "name": "KRS - Karavanakumar",
-  "short_name": "KRS",
-  "description": "KRS Leadership Website - Karavanakumar பேரூராட்சி கழகம்",
-  "start_url": "/",
+  "id": "krsaravanakumar-in",
+  "name": "K.R. Saravanakumar - TVK Town Panchayat Secretary | சரவணகுமார்",
+  "short_name": "KRS Saravanakumar",
+  "description": "Official website of K.R. Saravanakumar (KRS) - TVK Town Panchayat Secretary, Kasipalayam, Gobichettipalayam, Erode. சரவணகுமார் அதிகாரப்பூர்வ இணையதளம். Contact: +91 86676 70083",
+  "start_url": "/?utm_source=pwa&utm_medium=homescreen",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#000000",
   "theme_color": "#b91c1c",
   "orientation": "portrait-primary",
+  "lang": "ta",
+  "dir": "ltr",
+  "categories": ["politics", "government", "news"],
+  "iarc_rating_id": "",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Contact KRS",
+      "short_name": "Contact",
+      "description": "Contact K.R. Saravanakumar",
+      "url": "/#contact?utm_source=pwa",
+      "icons": [{ "src": "/icons/android-icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Key Leaders",
+      "short_name": "Leaders",
+      "description": "View TVK Key Leaders",
+      "url": "/#leaders?utm_source=pwa",
+      "icons": [{ "src": "/icons/android-icon-96x96.png", "sizes": "96x96" }]
+    }
+  ],
   "icons": [
     {
       "src": "/icons/android-icon-36x36.png",
@@ -37,13 +61,35 @@
       "src": "/icons/android-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/ms-icon-310x310.png",
       "sizes": "310x310",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/ms-icon-310x310.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/saravanan.png",
+      "sizes": "400x400",
+      "type": "image/png",
+      "label": "K.R. Saravanakumar - TVK Leader"
+    }
+  ],
+  "related_applications": [],
+  "handle_links": "preferred"
 }

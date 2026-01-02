@@ -1,4 +1,4 @@
-import { Navigation } from "./components/navigation";
+// Navigation is now rendered at the app root so it's available on all routes
 import { HeroSection } from "./components/hero-section";
 import { IdeologySection } from "./components/ideology-section";
 import { KeyLeadersSection } from "./components/key-leaders-section";
@@ -9,13 +9,18 @@ import { LeadershipCommitteeSection } from "./components/officers-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
 import { WhatsAppFloatingButton } from "./components/whatsapp-floating-button";
+import ReportFloatingButton from "./components/report-floating-button";
+import { SEOContent, useSEO } from "./components/seo";
 
 export default function App() {
+  // Initialize SEO
+  useSEO();
+  
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Navigation />
+      {/* Hidden SEO Content for Search Engines */}
+      <SEOContent />
       <HeroSection />
-      
       <VijaySection />
       <KeyLeadersSection />
       <IdeologySection />
@@ -27,6 +32,7 @@ export default function App() {
         <ContactSection />
       </div>
       <Footer />
+      <ReportFloatingButton />
       <WhatsAppFloatingButton />
     </div>
   );

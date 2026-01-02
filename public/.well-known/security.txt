@@ -1,0 +1,10 @@
+# Security Policy for krsaravanakumar.in
+# K.R. Saravanakumar - TVK Town Panchayat Secretary Official Website
+
+Contact: mailto:tvk.krsaravanan@gmail.com
+Expires: 2027-01-02T00:00:00.000Z
+Preferred-Languages: ta, en
+Canonical: https://krsaravanakumar.in/.well-known/security.txt
+
+# This website is the official digital presence of K.R. Saravanakumar
+# Any security concerns can be reported to the email above

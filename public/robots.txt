@@ -1,0 +1,67 @@
+# Robots.txt for krsaravanakumar.in
+# K.R. Saravanakumar - TVK Town Panchayat Secretary Official Website
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /sw.js
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /icons/
+Allow: /leaders/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://krsaravanakumar.in/sitemap.xml
+Sitemap: https://krsaravanakumar.in/sitemap-images.xml
+
+# Host
+Host: https://krsaravanakumar.in

@@ -124,6 +124,26 @@ export function Footer() {
 
           
         </div>
+        
+        {/* SEO Rich Footer Content */}
+        <div className="border-t border-neutral-800 mt-8 pt-8">
+          <div className="text-center text-white/40 text-xs space-y-2">
+            <p itemScope itemType="https://schema.org/Person">
+              <span itemProp="name">K.R. Saravanakumar</span> (<span itemProp="alternateName">KRS</span>) - 
+              <span itemProp="jobTitle">TVK Town Panchayat Secretary</span>
+            </p>
+            <p itemScope itemType="https://schema.org/PostalAddress">
+              <span itemProp="streetAddress">Kasipalayam</span>, 
+              <span itemProp="addressLocality">Gobichettipalayam</span>, 
+              <span itemProp="addressRegion">Erode, Tamil Nadu</span>, 
+              <span itemProp="postalCode">638454</span>, 
+              <span itemProp="addressCountry">India</span>
+            </p>
+            <p>
+              Also known as: Saravanakumar | Saravanan | சரவணகுமார் | சரவணன் | KR Saravanakumar
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Bar */}
@@ -131,7 +151,7 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-sm text-center sm:text-left">
-              ©  {new Date().getFullYear()} All rights reserved.
+              © {new Date().getFullYear()} K.R. Saravanakumar (KRS) - krsaravanakumar.in - All rights reserved.
             </p>
             <div className="flex items-center gap-2 text-white/50 text-sm">
               <span>Crafted By</span>
