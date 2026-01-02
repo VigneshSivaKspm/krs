@@ -60,7 +60,7 @@ export function Footer() {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">K.R. SARAVANAN</h3>
+                <h3 className="text-lg font-bold text-white">K.R.Saravanakumar</h3>
                 <p className="text-sm text-yellow-500">TVK</p>
               </div>
             </div>

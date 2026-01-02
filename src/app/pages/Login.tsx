@@ -15,6 +15,7 @@ export default function Login() {
     try {
       await loginWithEmail(email, password);
       setMessage("Logged in successfully.");
+      navigate('/');
     } catch (err: any) {
       setMessage(err?.message || "Login failed");
     } finally { setLoading(false); }

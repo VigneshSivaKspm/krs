@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { getFirestore, doc, setDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { getFirestore, doc, setDoc, collection, addDoc, serverTimestamp, getDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -32,6 +32,13 @@ export async function loginWithEmail(email: string, password: string) {
 export async function saveUserDetails(uid: string, data: Record<string, any>) {
   const userRef = doc(db, "users", uid);
   await setDoc(userRef, { ...data, uid, updatedAt: serverTimestamp() }, { merge: true });
+}
+
+export async function getUserDetails(uid: string) {
+  const userRef = doc(db, "users", uid);
+  const snap = await getDoc(userRef);
+  if (!snap.exists()) return null;
+  return snap.data();
 }
 
 export async function addReport(ward: number, data: Record<string, any>) {

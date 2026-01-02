@@ -20,7 +20,7 @@ const leadershipMembers = [
     englishRole: "Panchayat Treasurer",
     name: "G.முருகேசன்",
     englishName: "G. Murugesan",
-    address: "",
+    address: "கோவில் புதூர்",
     phone: "+91 9952271437",
     image: "/assets/murugesan.jpeg",
   },
@@ -81,7 +81,7 @@ export function LeadershipCommitteeSection() {
           
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 text-left px-4">
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-              கழகத்தின் முக்கிய முடிவுகளை எடுக்கும் மற்றும் வழிநடத்தும் தலைமை நிர்வாகிகள். இவர்களின் வழிகாட்டுதலின் கீழ் கழகம் பீடு நடை போடுகிறது.
+              கழகத்தின் முக்கிய முடிவுகளை எடுக்கும் மற்றும் வழிநடத்தும் தலைமை நிர்வாகிகள். இவர்களின் வழிகாட்டுதலின் கீழ் கழகம் வீர நடை போடுகிறது.
             </p>
             <p className="text-sm sm:text-base text-yellow-500 italic">
               "The core leadership team that guides and governs our organization. Under their stewardship, we move forward with strength and vision."

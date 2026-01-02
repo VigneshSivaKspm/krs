@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import type { User } from "firebase/auth";
+import { auth } from "../../firebase";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -11,6 +14,7 @@ interface BeforeInstallPromptEvent extends Event {
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
 
@@ -22,6 +26,11 @@ export function Navigation() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (u) => setUser(u));
+    return () => unsub();
   }, []);
 
   // PWA Install prompt handler
@@ -56,7 +65,16 @@ export function Navigation() {
     setDeferredPrompt(null);
   };
 
+  // ensure vars are considered used by TypeScript when passed to child components
+  void isInstallable;
+  void handleInstallClick;
+
   const closeMobile = () => setIsMobileMenuOpen(false);
+
+  const handleLogout = async () => {
+    try { await signOut(auth); } catch (e) { console.error(e); }
+    setIsMobileMenuOpen(false);
+  };
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -100,51 +118,10 @@ export function Navigation() {
           <img src="/assets/flag.png" alt="Flag" className="h-8 sm:h-16 w-auto object-contain" />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={closeMobile}
-                className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
-            <Link to="/login" className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">Login</Link>
-            {isInstallable && (
-              <Button
-                onClick={handleInstallClick}
-                className="ml-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded-full flex items-center gap-2"
-              >
-                <Download size={16} />
-                Install
-              </Button>
-            )}
-          </div>
+          <HeaderAuthArea navItems={navItems} isInstallable={isInstallable} handleInstallClick={handleInstallClick} closeMobile={closeMobile} />
 
-          {/* Mobile Login (visible) and Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
-            <Link
-              to="/login"
-              onClick={closeMobile}
-              className="px-3 py-1 text-sm text-white hover:text-yellow-500 transition-colors font-medium"
-            >
-              Login
-            </Link>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white hover:text-yellow-500 hover:bg-transparent z-60"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </Button>
-          </div>
+          {/* Mobile Menu Button (drawer contains auth actions) */}
+          <MobileAuthArea isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} closeMobile={closeMobile} />
         </div>
 
         {/* Mobile Navigation (absolute overlay so it doesn't change header height) */}
@@ -160,7 +137,15 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <a href="/login" className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800">Login</a>
+            {user ? (
+              <div className="px-4 py-3 border-b border-neutral-800">
+                <div className="text-sm text-neutral-300">Welcome,</div>
+                <div className="mt-1 text-white font-semibold">{user.displayName || user.email?.split('@')[0]}</div>
+                <button onClick={handleLogout} className="mt-3 w-full px-4 py-3 bg-white/5 text-white rounded-md">Logout</button>
+              </div>
+            ) : (
+              <a href="/login" className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800">Login</a>
+            )}
             {isInstallable && (
               <button
                 onClick={handleInstallClick}
@@ -178,3 +163,47 @@ export function Navigation() {
 }
 
 export default Navigation;
+
+function HeaderAuthArea({ navItems, isInstallable, handleInstallClick, closeMobile }:{navItems:any[], isInstallable:boolean, handleInstallClick:()=>void, closeMobile:()=>void}){
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (u) => setUser(u));
+    return () => unsub();
+  }, []);
+
+  const handleLogout = async () => {
+    try { await signOut(auth); } catch (e) { console.error(e); }
+  };
+
+  return (
+    <div className="hidden md:flex items-center gap-2 lg:gap-4">
+      {navItems.map((item) => (
+        <a key={item.label} href={item.href} onClick={closeMobile} className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">{item.label}</a>
+      ))}
+
+      {user ? (
+        <div className="flex items-center gap-3">
+          <div className="text-sm text-neutral-300">Welcome,&nbsp;<span className="font-semibold text-white">{user.displayName || user.email?.split('@')[0]}</span></div>
+          <button onClick={handleLogout} className="px-3 py-2 bg-white/5 hover:bg-white/10 text-sm rounded-md">Logout</button>
+        </div>
+      ) : (
+        <Link to="/login" className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">Login</Link>
+      )}
+
+      {isInstallable && (
+        <Button onClick={handleInstallClick} className="ml-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded-full flex items-center gap-2"><Download size={16} />Install</Button>
+      )}
+    </div>
+  );
+}
+
+function MobileAuthArea({ isMobileMenuOpen, setIsMobileMenuOpen }:{isMobileMenuOpen:boolean, setIsMobileMenuOpen: (v:boolean)=>void, closeMobile:()=>void}){
+  return (
+    <div className="md:hidden">
+      <Button variant="ghost" size="icon" className="text-yellow-400 hover:text-yellow-300 bg-black/20 hover:bg-white/5 z-60" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu">
+        {isMobileMenuOpen ? (<X className="w-6 h-6" />) : (<Menu className="w-6 h-6" />)}
+      </Button>
+    </div>
+  );
+}

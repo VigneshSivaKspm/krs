@@ -1,4 +1,4 @@
-import { Scale, Users, Eye, Shield } from "lucide-react";
+import { Scale, Users, Eye, Shield, Ban, ShieldCheck } from "lucide-react";
 
 const principles = [
   {
@@ -15,6 +15,16 @@ const principles = [
     tamil: "இளைஞர் முன்னேற்றம்",
     english: "Youth Empowerment",
     icon: Users,
+  },
+  {
+    tamil: "பெண்கள் பாதுகாப்பு",
+    english: "Women's Safety",
+    icon: ShieldCheck,
+  },
+  {
+    tamil: "போதையில்லா தமிழகம்",
+    english: "Drug-Free Tamil Nadu",
+    icon: Ban,
   },
   {
     tamil: "வெளிப்படையான ஆட்சியை முன்னெடுத்தல்",

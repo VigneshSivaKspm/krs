@@ -6,6 +6,7 @@ export default function SignUp() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [ward, setWard] = useState<number>(1);
   const [email, setEmail] = useState("");
   const [area, setArea] = useState("");
   const [street, setStreet] = useState("");
@@ -19,8 +20,9 @@ export default function SignUp() {
     setLoading(true);
     try {
       const user = await signupWithEmail(email, password, { displayName: name });
-      await saveUserDetails(user.uid, { name, phone, email, area: `${area} ${street}`.trim(), street, landmark });
+      await saveUserDetails(user.uid, { name, phone, email, ward, area: `${area} ${street}`.trim(), street, landmark });
       setMessage("Account created successfully.");
+      navigate('/');
     } catch (err: any) {
       setMessage(err?.message || "Error creating account");
     } finally {
@@ -49,6 +51,10 @@ export default function SignUp() {
         <input required placeholder="Full name" value={name} onChange={(e)=>setName(e.target.value)} className="w-full p-3 mb-3 bg-white/5 text-white placeholder:text-neutral-400 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" />
         <label className="block mb-2 text-sm text-neutral-300">Phone*</label>
         <input required placeholder="Phone number" value={phone} onChange={(e)=>setPhone(e.target.value)} className="w-full p-3 mb-3 bg-white/5 text-white placeholder:text-neutral-400 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" />
+        <label className="block mb-2 text-sm text-neutral-300">Ward*</label>
+        <select value={ward} onChange={(e)=>setWard(Number(e.target.value))} className="w-full p-3 mb-3 bg-white text-black rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
+          {Array.from({length:15},(_,i)=>i+1).map(w=> <option key={w} value={w} className="text-black">{w}</option>)}
+        </select>
         <label className="block mb-2 text-sm text-neutral-300">Email (optional)</label>
         <input placeholder="Email address (optional)" value={email} onChange={(e)=>setEmail(e.target.value)} className="w-full p-3 mb-3 bg-white/5 text-white placeholder:text-neutral-400 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" />
         <label className="block mb-2 text-sm text-neutral-300">Area / Street*</label>
