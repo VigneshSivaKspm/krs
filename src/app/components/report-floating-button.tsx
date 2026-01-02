@@ -24,10 +24,16 @@ export function ReportFloatingButton(){
             // allow a tick for the drawer to mount, then open (for transition)
             setTimeout(() => setIsOpen(true), 10);
           } else {
-            setIsOpen(true);
+            // if already open, start close; otherwise open
+            if (isOpen) {
+              setIsOpen(false);
+              setTimeout(() => setShowDrawer(false), 300);
+            } else {
+              setIsOpen(true);
+            }
           }
         }}
-        className={`fixed right-0 top-1/2 transform -translate-y-1/2 z-50 w-6 h-36 text-white rounded-none shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden ${isOpen ? '-translate-x-[92vw] sm:-translate-x-[24rem]' : ''}`}
+        className={`fixed right-0 top-1/2 transform -translate-y-1/2 z-[9999] w-6 h-36 text-white rounded-none shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden ${isOpen ? '-translate-x-[92vw] sm:-translate-x-[24rem]' : ''}`}
         title="Report an issue / submit request"
         aria-label="Open report drawer"
       >
@@ -41,16 +47,16 @@ export function ReportFloatingButton(){
       </button>
 
       {showDrawer && (
-        <div className="fixed inset-0 z-60 flex justify-end pointer-events-auto">
+        <div className="fixed inset-0 z-[9998] flex justify-end pointer-events-auto">
           <div
-            className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-[9997] ${isOpen ? 'opacity-100' : 'opacity-0'}`}
             onClick={() => {
               // start close animation
               setIsOpen(false);
               setTimeout(() => setShowDrawer(false), 300);
             }}
           />
-          <aside className={`relative right-0 top-0 h-full w-[92%] sm:w-96 bg-black text-white shadow-2xl p-4 overflow-auto transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <aside className={`relative right-0 top-0 h-full w-[92%] sm:w-96 bg-black text-white shadow-2xl p-4 overflow-auto transform transition-transform duration-300 z-[9998] ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="flex items-center justify-between mb-4">
               <div className="text-lg font-semibold">Report</div>
               <button onClick={() => {
