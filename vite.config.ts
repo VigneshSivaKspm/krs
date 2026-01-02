@@ -43,12 +43,21 @@ export default defineConfig({
   },
   // Development server configuration
   server: {
-    host: true, // listen on all addresses (useful for devices on LAN)
+    // Listen on all interfaces so other devices can reach the dev server if needed
+    host: true,
+    // Fixed dev port to avoid random port assignments
     port: 3000,
+    strictPort: true,
     open: true,
-    // Disable HMR websocket on your request to avoid websocket errors during development
-    // Note: this disables hot module replacement; you'll need to refresh to see changes.
-    hmr: false,
+    // Robust HMR settings. If you're developing locally, this will use ws://localhost:3000.
+    // If you're inside Docker/WSL or accessing from another device, set `host` to your machine IP.
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost',
+      clientPort: 3000,
+    },
+    // If your environment (Docker/WSL) doesn't support file system events, enable polling:
+    // watch: { usePolling: true },
   },
   // Preview server configuration (for production testing)
   preview: {
