@@ -4,46 +4,35 @@ import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "./ui/carousel";
 import { Phone, ShieldCheck } from "lucide-react";
 const leadershipMembers = [
-    {
+  {
     id: 1,
-    role: "இணைச் செயலாளர்",
-    englishRole: "Joint Secretary",
-    name: "கே. விஜயன்",
-    englishName: "K. Vijayan",
-    address: "Central Wing, Administration Block",
-    phone: "+91 9876543402",
-    image: "/leadership/joint-sec.jpg",
+    role: "பேரூராட்சி கழக இணைச் செயலாளர்",
+    englishRole: "Panchayat Joint Secretary",
+    name: "D.செல்வராஜ்",
+    englishName: "D. Selvaraj",
+    address: "குமரன் கரடு",
+    phone: "+91 7373212354",
+    image: "/assets/selvaraj.jpg",
   },
   {
     id: 2,
-    role: "துணைச் செயலாளர்",
-    englishRole: "Deputy Secretary",
-    name: "சி. ரமேஷ்",
-    englishName: "S. Ramesh",
-    address: "East Wing, Public Relations Office",
-    phone: "+91 9876543404",
-    image: "/leadership/deputy-2.jpg",
+    role: "பேரூராட்சி பொருளாளர்",
+    englishRole: "Panchayat Treasurer",
+    name: "G.முருகேசன்",
+    englishName: "G. Murugesan",
+    address: "",
+    phone: "+91 9952271437",
+    image: "/assets/murugesan.jpeg",
   },
   {
     id: 3,
-    role: "துணைச் செயலாளர்",
-    englishRole: "Deputy Secretary",
-    name: "மு. பாஸ்கர்",
-    englishName: "M. Bhaskar",
-    address: "West Wing, Operational Command",
-    phone: "+91 9876543403",
-    image: "/leadership/deputy-1.jpg",
-  },
-  
-  {
-    id: 4,
-    role: "பொருளாளர்",
-    englishRole: "Treasurer",
-    name: "அ. இராம்குமார்",
-    englishName: "A. Ramkumar",
-    address: "HQ Office, Finance Department Tower",
-    phone: "+91 9876543401",
-    image: "/leadership/treasurer.jpg",
+    role: "பேரூராட்சி துணை செயலாளர்",
+    englishRole: "Panchayat Deputy Secretary",
+    name: "E.தேவமனோகரி",
+    englishName: "E. Devamanohari",
+    address: "கணபதிபாளையம்",
+    phone: "+91 8438018536",
+    image: "/assets/devemanohari.jpeg",
   }
 ];
 
