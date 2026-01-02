@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +21,38 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // PWA Install prompt handler
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setIsInstallable(true);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    // Check if app is already installed
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      setIsInstallable(false);
+    }
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    
+    if (outcome === 'accepted') {
+      setIsInstallable(false);
+    }
+    setDeferredPrompt(null);
+  };
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -75,6 +114,15 @@ export function Navigation() {
                 {item.label}
               </button>
             ))}
+            {isInstallable && (
+              <Button
+                onClick={handleInstallClick}
+                className="ml-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded-full flex items-center gap-2"
+              >
+                <Download size={16} />
+                Install
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,11 +147,20 @@ export function Navigation() {
               <button
                 key={item.label}
                 onClick={() => item.id ? scrollToSection(item.id) : item.action?.()}
-                className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800 last:border-b-0"
+                className="block w-full text-left px-4 py-3 text-white hover:text-black hover:bg-yellow-500 transition-colors font-medium border-b border-neutral-800"
               >
                 {item.label}
               </button>
             ))}
+            {isInstallable && (
+              <button
+                onClick={handleInstallClick}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-black font-bold hover:bg-yellow-600 transition-colors"
+              >
+                <Download size={18} />
+                Install App
+              </button>
+            )}
           </div>
         </div>
       </div>
