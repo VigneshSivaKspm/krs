@@ -156,12 +156,12 @@ export function Footer() {
             <div className="flex items-center gap-2 text-white/50 text-sm">
               <span>Crafted By</span>
               <a
-                href="https://poeagetechnology.com"
+                href="https://legendaryone.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors"
               >
-                Poeage technology
+                Legendary One
               </a>
             </div>
           </div>
