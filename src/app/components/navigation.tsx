@@ -12,7 +12,7 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
@@ -105,12 +105,12 @@ export function Navigation() {
             >
               <div className="flex items-baseline">
                  <span className="text-xl sm:text-3xl font-black leading-none">
+                  <span className="text-red-700">T</span>
+                  <span className="text-yellow-500">V</span>
                   <span className="text-red-700">K</span>
-                  <span className="text-yellow-500">R</span>
-                  <span className="text-red-700">S</span>
                 </span>
                 <div className="text-xs sm:text-sm font-bold text-white tracking-wider">
-                  aravanakumar
+                  Kasipalayam
                 </div>
               </div>
             </a>
