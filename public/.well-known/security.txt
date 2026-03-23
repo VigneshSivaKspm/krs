@@ -1,0 +1,10 @@
+# Security Policy for tvkkasipalayam.in
+# TVK Kasipalayam - Tamilaga Vettri Kazhagam Official Website
+
+Contact: mailto:tvk.krsaravanan@gmail.com
+Expires: 2027-01-02T00:00:00.000Z
+Preferred-Languages: ta, en
+Canonical: https://tvkkasipalayam.in/.well-known/security.txt
+
+# This website is the official digital presence of TVK Kasipalayam
+# Any security concerns can be reported to the email above

@@ -1,0 +1,11 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+/* TVK Flag Custom Colors */
+@theme {
+  --color-tvk-red: #B91C1C;
+  --color-tvk-yellow: #FBC02D;
+  --color-tvk-dark: #7F1D1D;
+}
