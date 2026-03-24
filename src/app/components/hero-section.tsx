@@ -140,12 +140,13 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
- {/* Position Badge */}
-            <div className="pt-2 sm:pt-4 flex justify-center">
-              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2 bg-red-700 rounded">
-                <span className="text-sm sm:text-base text-white font-semibold" itemProp="jobTitle">கழக பேரூராட்சி செயலாளர்</span>
+            {/* Position Badge */}
+            <div className="pt-1 sm:pt-2 flex justify-center px-2">
+              <div className="inline-flex items-center justify-center px-2 sm:px-4 py-1 sm:py-1.5 bg-red-700 rounded text-center">
+                <span className="text-xs sm:text-sm text-white font-semibold line-clamp-2" itemProp="jobTitle">பேரூராட்சி கழக செயலாளர் காசிபாளையம்</span>
               </div>
             </div>
+            
             {/* Tagline */}
             <div className="space-y-2 sm:space-y-4 text-center lg:text-center">
               <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
