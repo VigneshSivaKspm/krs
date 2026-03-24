@@ -108,8 +108,10 @@ export function OrganizationalLeadersSection() {
                 <div className="px-3 sm:px-4 pb-3 flex-1 flex flex-col justify-between">
                   {/* Name */}
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white line-clamp-1">
-                      {leader.name}
+                    <h3 className="text-sm sm:text-base font-bold text-white overflow-hidden">
+                      <span className="inline-block whitespace-nowrap animate-marquee">
+                        {leader.name}
+                      </span>
                     </h3>
                     <p className="text-xs text-yellow-500 font-semibold line-clamp-1">
                       {leader.englishName}
@@ -131,6 +133,20 @@ export function OrganizationalLeadersSection() {
           </p>
         </div>
       </div>
+      
+      <style>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 8s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }
