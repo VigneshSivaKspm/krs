@@ -45,9 +45,23 @@ export function HeroSection() {
           {/* Right Image & Name Section */}
           <div className="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2">
             
-            {/* Top Images Row - Kasengottayan & Pradeepkumar */}
+            {/* Top Images Row - Anandha, Sengottayan & Pradeepkumar */}
             <div className="flex items-center justify-between w-full px-0">
-              {/* Left Top - Kasengottayan Image */}
+              {/* Left Top - Anandha Image */}
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-500/15 to-red-600/15 blur-2xl"></div>
+                <img 
+                  src="/assets/Aanandh.jpeg"
+                  alt="Anandha - TVK Leader"
+                  title="Anandha - Tamilaga Vettri Kazhagam"
+                  className="relative w-full h-full object-cover rounded-full border-2 border-red-600/30 shadow-xl"
+                  loading="eager"
+                  width="300"
+                  height="300"
+                />
+              </div>
+              
+              {/* Center-Left Top - Kasengottayan Image */}
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
