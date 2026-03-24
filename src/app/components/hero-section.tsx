@@ -77,7 +77,7 @@ export function HeroSection() {
               
               {/* Right Top - Pradeepkumar Image */}
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-500/15 to-red-600/15 blur-2xl"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
                   src="/assets/Pradeepkumar.png"
                   alt="Pradeepkumar - TVK Leader"
@@ -143,7 +143,7 @@ export function HeroSection() {
  {/* Position Badge */}
             <div className="pt-2 sm:pt-4 flex justify-center">
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2 bg-red-700 rounded">
-                <span className="text-sm sm:text-base text-white font-semibold" itemProp="jobTitle">Town Panchayat Secretary</span>
+                <span className="text-sm sm:text-base text-white font-semibold" itemProp="jobTitle">கழக பேரூராட்சி செயலாளர்</span>
               </div>
             </div>
             {/* Tagline */}
