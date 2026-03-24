@@ -12,7 +12,7 @@ const leadershipMembers = [
     englishName: "D. Selvaraj",
     address: "குமரன் கரடு",
     phone: "+91 7373212354",
-    image: "/assets/selvaraj.jpg",
+    image: "/assets/selvaraj.jpeg",
   },
   {
     id: 2,
