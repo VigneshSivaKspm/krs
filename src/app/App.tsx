@@ -25,10 +25,9 @@ function Home() {
       {/* Hidden SEO Content for Search Engines */}
       <SEOContent />
       <HeroSection />
+        <VijaySection />
+        <OrganizationalLeadersSection />
        <KeyLeadersSection />
-      <VijaySection />
-      <OrganizationalLeadersSection />
-     
       <IdeologySection />
       <LeadershipCommitteeSection />
       <ExecutiveCommitteeSection />

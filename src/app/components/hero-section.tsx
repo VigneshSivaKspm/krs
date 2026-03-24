@@ -40,20 +40,15 @@ export function HeroSection() {
 
             
           </div>
-  {/* Position Badge */}
-            <div className="pt-2 sm:pt-4 flex justify-center">
-              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2 bg-red-700 rounded">
-                <span className="text-sm sm:text-base text-white font-semibold" itemProp="jobTitle">Town Panchayat Secretary</span>
-              </div>
-            </div>
+ 
 
           {/* Right Image & Name Section */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-4 sm:gap-8">
+          <div className="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2">
             
             {/* Top Images Row - Kasengottayan & Pradeepkumar */}
-            <div className="flex items-center justify-center gap-8 sm:gap-12 lg:gap-16 w-full px-4">
+            <div className="flex items-center justify-between w-full px-0">
               {/* Left Top - Kasengottayan Image */}
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 flex-shrink-0">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
                   src="/assets/K-A-Sengottayan.webp"
@@ -67,7 +62,7 @@ export function HeroSection() {
               </div>
               
               {/* Right Top - Pradeepkumar Image */}
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 flex-shrink-0">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-500/15 to-red-600/15 blur-2xl"></div>
                 <img 
                   src="/assets/Pradeepkumar.png"
@@ -131,7 +126,12 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-
+ {/* Position Badge */}
+            <div className="pt-2 sm:pt-4 flex justify-center">
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2 bg-red-700 rounded">
+                <span className="text-sm sm:text-base text-white font-semibold" itemProp="jobTitle">Town Panchayat Secretary</span>
+              </div>
+            </div>
             {/* Tagline */}
             <div className="space-y-2 sm:space-y-4 text-center lg:text-center">
               <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">

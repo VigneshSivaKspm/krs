@@ -30,32 +30,38 @@ export function ReportFloatingButton(){
 
   return (
     <>
-      <button
-        onClick={() => {
-          if (!showDrawer) {
-            setShowDrawer(true);
-            // allow a tick for the drawer to mount, then open (for transition)
-            setTimeout(() => setIsOpen(true), 10);
-          } else {
-            // if already open, start close; otherwise open
-            if (isOpen) {
-              setIsOpen(false);
-              setTimeout(() => setShowDrawer(false), 300);
+      <div className="fixed left-3 sm:left-5 bottom-28 sm:bottom-32 z-40 flex items-center gap-2">
+        {/* Label pill */}
+        <button
+          onClick={() => {
+            if (!showDrawer) {
+              setShowDrawer(true);
+              setTimeout(() => setIsOpen(true), 10);
             } else {
-              setIsOpen(true);
+              if (isOpen) {
+                setIsOpen(false);
+                setTimeout(() => setShowDrawer(false), 300);
+              } else {
+                setIsOpen(true);
+              }
             }
-          }
-        }}
-        className="fixed left-4 sm:left-6 bottom-20 sm:bottom-24 z-40 p-4 sm:p-5 bg-red-600 hover:bg-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none"
-        title="Report an issue / submit request"
-        aria-label="Open report form"
-      >
-        <img
-          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' stroke='white' stroke-width='2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3Cpath d='M12 6c-.55 0-1 .45-1 1v5c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1zm0 8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1s1-.45 1-1v-1c0-.55-.45-1-1-1z'/%3E%3C/svg%3E"
-          alt="Report"
-          className="w-6 h-6 sm:w-7 sm:h-7"
-        />
-      </button>
+          }}
+          className="p-4 sm:p-5 bg-red-600 hover:bg-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none flex-shrink-0"
+          title="Report an issue / submit request"
+          aria-label="Open report form"
+        >
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' stroke='white' stroke-width='2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3Cpath d='M12 6c-.55 0-1 .45-1 1v5c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1zm0 8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1s1-.45 1-1v-1c0-.55-.45-1-1-1z'/%3E%3C/svg%3E"
+            alt="Report"
+            className="w-6 h-6 sm:w-7 sm:h-7"
+          />
+        </button>
+        {/* Tooltip label */}
+        <div className="bg-red-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md leading-tight pointer-events-none">
+          <span className="block">Report /</span>
+          <span className="block">Request</span>
+        </div>
+      </div>
 
       {showDrawer && (
         <div className="fixed inset-0 z-[9998] flex justify-end pointer-events-auto">

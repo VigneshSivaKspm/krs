@@ -49,20 +49,20 @@ export function IdeologySection() {
           <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 max-w-7xl mx-auto">
           {principles.map((principle, index) => {
             const Icon = principle.icon;
             return (
               <div
                 key={index}
-                className="group bg-black border-2 border-neutral-800 hover:border-red-700 p-6 sm:p-8 transition-colors"
+                className="group bg-black border-2 border-neutral-800 hover:border-red-700 p-3 sm:p-4 transition-colors"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-red-700 flex items-center justify-center mb-4 sm:mb-6">
-                    <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-700 flex items-center justify-center mb-2 sm:mb-3">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">{principle.tamil}</h3>
-                  <p className="text-sm sm:text-base text-yellow-500">{principle.english}</p>
+                  <h3 className="text-xs sm:text-sm font-bold mb-1 text-white line-clamp-2">{principle.tamil}</h3>
+                  <p className="text-xs text-yellow-500 line-clamp-1">{principle.english}</p>
                 </div>
               </div>
             );
