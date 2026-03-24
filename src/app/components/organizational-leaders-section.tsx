@@ -93,12 +93,12 @@ export function OrganizationalLeadersSection() {
                 </div>
 
                 {/* Position Badge */}
-                <div className="bg-gradient-to-r from-red-700 to-red-600 px-3 sm:px-4 py-2">
-                  <span className="text-white font-bold text-xs sm:text-sm line-clamp-2">
+                <div className="bg-gradient-to-r from-red-700 to-red-600 px-3 sm:px-4 py-2 overflow-hidden">
+                  <span className="text-white font-bold text-xs sm:text-sm block whitespace-nowrap animate-marquee">
                     {leader.position}
                   </span>
                   {leader.englishPosition && (
-                    <p className="text-white text-xs mt-1 opacity-90 line-clamp-1">
+                    <p className="text-white text-xs mt-1 opacity-90 block whitespace-nowrap animate-marquee">
                       {leader.englishPosition}
                     </p>
                   )}
