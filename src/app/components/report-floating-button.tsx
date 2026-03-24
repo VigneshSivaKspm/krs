@@ -1,4 +1,4 @@
-import { X, Flag } from "lucide-react";
+import { X } from "lucide-react";
 import { useState, useEffect } from "react";
 import ReportForm from "../pages/ReportForm";
 
@@ -46,11 +46,11 @@ export function ReportFloatingButton(){
               }
             }
           }}
-          className="p-4 sm:p-5 bg-red-600 hover:bg-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none flex-shrink-0"
+          className="p-2 sm:p-3 bg-white hover:bg-gray-100 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none flex-shrink-0"
           title="Report an issue / submit request"
           aria-label="Open report form"
         >
-          <Flag className="w-6 h-6 sm:w-7 sm:h-7 text-white fill-white" />
+          <img src="/assets/flag.png" alt="Report" className="w-10 h-12 sm:w-14 sm:h-14 object-contain" />
         </button>
         {/* Tooltip label */}
         <div className="bg-red-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md leading-tight pointer-events-none">
@@ -62,19 +62,19 @@ export function ReportFloatingButton(){
       {showDrawer && (
         <div className="fixed inset-0 z-[9998] flex justify-end pointer-events-auto">
           <div
-              className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-[9997] ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 z-[9997] ${isOpen ? 'opacity-100' : 'opacity-0'}`}
             onClick={() => {
               // start close animation
               setIsOpen(false);
               setTimeout(() => setShowDrawer(false), 300);
             }}
           />
-            <aside className={`relative right-0 top-0 h-full w-[92%] sm:w-96 bg-black text-white shadow-2xl p-4 overflow-auto transform transition-transform duration-300 z-[9998] ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <aside className={`relative right-0 top-0 h-full w-[92%] sm:w-96 bg-amber-50 text-gray-900 shadow-2xl p-4 overflow-auto transform transition-transform duration-300 z-[9998] border-l-4 border-amber-400 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="flex items-center justify-end mb-4">
               <button onClick={() => {
                 setIsOpen(false);
                 setTimeout(() => setShowDrawer(false), 300);
-              }} className="p-2 rounded-md bg-white/5 hover:bg-white/10"><X className="w-5 h-5" /></button>
+              }} className="p-2 rounded-md bg-red-100 hover:bg-red-200 text-red-800"><X className="w-5 h-5" /></button>
             </div>
             <ReportForm embedded={true} />
           </aside>

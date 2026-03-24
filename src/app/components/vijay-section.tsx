@@ -1,9 +1,9 @@
 export function VijaySection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-32 overflow-hidden bg-neutral-950">
+    <section className="relative py-20 sm:py-28 lg:py-32 overflow-hidden bg-[#7F1D1D]">
       {/* Decorative lines */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-red-700"></div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-yellow-500"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-amber-400"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-amber-400"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,9 +12,9 @@ export function VijaySection() {
           <div className="space-y-6 sm:space-y-8">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                A Leader,<br /> <span className="text-red-700">An Inspiration</span>
+                A Leader,<br /> <span className="text-amber-400">An Inspiration</span>
               </h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl text-yellow-500 mb-8 sm:mb-12 font-bold">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl text-amber-300 mb-8 sm:mb-12 font-bold">
                 Thalapathy Vijay
               </h3>
             </div>
@@ -22,44 +22,44 @@ export function VijaySection() {
               <img
                 src="/assets/vijay.png"
                 alt="Thalapathy Vijay"
-                className="w-full max-w-sm lg:max-w-md h-auto object-contain"
+                className="w-full max-w-sm lg:max-w-md h-auto object-contain drop-shadow-2xl"
               />
             </div>
           </div>
 
           {/* Right Column - Content */}
           <div className="space-y-6 sm:space-y-8 text-white">
-              <div className="p-4 sm:p-6 bg-black border-2 border-neutral-800">
-                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-red-700 font-bold">Early Life</h4>
-                <ul className="space-y-2 text-base sm:text-lg text-white/80">
+              <div className="p-4 sm:p-6 bg-red-900/60 border-2 border-amber-400/30 rounded-lg">
+                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-amber-400 font-bold">Early Life</h4>
+                <ul className="space-y-2 text-base sm:text-lg text-amber-100">
                   <li>• Born in Chennai, Tamil Nadu</li>
                   <li>• Son of S. A. Chandrasekhar, film director</li>
                 </ul>
               </div>
 
-              <div className="p-4 sm:p-6 bg-black border-2 border-neutral-800">
-                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-red-700 font-bold">Cinema Journey</h4>
-                <ul className="space-y-2 text-base sm:text-lg text-white/80">
+              <div className="p-4 sm:p-6 bg-red-900/60 border-2 border-amber-400/30 rounded-lg">
+                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-amber-400 font-bold">Cinema Journey</h4>
+                <ul className="space-y-2 text-base sm:text-lg text-amber-100">
                   <li>• Began acting as a child</li>
                   <li>• Became one of Tamil cinema's biggest stars</li>
                   <li>• Known for socially conscious films</li>
                 </ul>
               </div>
 
-              <div className="p-4 sm:p-6 bg-black border-2 border-neutral-800">
-                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-red-700 font-bold">Political Vision & TVK Formation</h4>
-                <ul className="space-y-2 text-base sm:text-lg text-white/80">
+              <div className="p-4 sm:p-6 bg-red-900/60 border-2 border-amber-400/30 rounded-lg">
+                <h4 className="text-xl sm:text-2xl mb-3 sm:mb-4 text-amber-400 font-bold">Political Vision & TVK Formation</h4>
+                <ul className="space-y-2 text-base sm:text-lg text-amber-100">
                   <li>• Founded Tamilaga Vettri Kazhagam (TVK) in 2024</li>
                   <li>• Focused on transparency, social justice, and youth empowerment</li>
                   <li>• Inspires young leaders across Tamil Nadu</li>
                 </ul>
               </div>
 
-              <div className="bg-black border-l-4 border-yellow-500 p-4 sm:p-6">
+              <div className="bg-red-900/60 border-l-4 border-amber-400 p-4 sm:p-6 rounded-r-lg">
                 <p className="text-lg sm:text-xl md:text-2xl mb-2 text-white">
                   எல்லா ஆட்சியும் மக்கள் நலனுக்காகவே இருக்க வேண்டும்
                 </p>
-                <p className="text-base sm:text-lg text-yellow-500 italic">
+                <p className="text-base sm:text-lg text-amber-400 italic">
                   "Every governance must serve the people."
                 </p>
               </div>

@@ -86,20 +86,20 @@ export function KeyLeadersSection() {
   }, [api]);
 
   return (
-    <section id="leaders" className="py-16 sm:py-20 lg:py-24 bg-black">
+    <section id="leaders" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">
             கொள்கை முன்னோடி தலைவர்கள்
           </h2>
-          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-700 font-bold">Key Ideological Leaders</p>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-800 font-bold">Key Ideological Leaders</p>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 sm:mb-8"></div>
           
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 text-left px-4">
-            <p className="text-sm sm:text-base text-white/80">
+            <p className="text-sm sm:text-base text-gray-700">
               தமிழக வெற்றி கழகத்தின் கொள்கை மற்றும் சிந்தனை முன்மாதிரிகளாக அமைந்த சில முக்கிய தலைவர்களின் வரலாற்றுப் பாதைகள் மற்றும் அவர்களின் தியாகம் நமக்கு ஒவ்வொரு நாளும் ஊக்கமாக உள்ளது.
             </p>
-            <p className="text-sm sm:text-base text-yellow-500 italic">
+            <p className="text-sm sm:text-base text-amber-700 italic font-medium">
               "The historical paths and sacrifices of key leaders who shaped Tamilaga Vettri Kazhagam's ideology inspire us every day."
             </p>
           </div>
@@ -110,26 +110,26 @@ export function KeyLeadersSection() {
             <CarouselContent className="-ml-2 md:-ml-4">
               {leaders.map((leader, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden group bg-neutral-950 border-2 border-neutral-800 hover:border-red-700 transition-colors h-full">
+                  <Card className="overflow-hidden group bg-white border-2 border-amber-200 hover:border-red-700 hover:shadow-xl transition-all duration-300 h-full">
                     <div className="aspect-[3/4] overflow-hidden relative">
                       <img
                         src={leader.image}
                         alt={leader.englishName}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/80">
-                        <span className="inline-block px-3 py-1 bg-red-700 text-xs sm:text-sm text-white font-bold">
+                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                        <span className="inline-block px-3 py-1 bg-[#991B1B] text-xs sm:text-sm text-white font-bold rounded">
                           {leader.role}
                         </span>
                       </div>
                     </div>
                     <div className="p-4 sm:p-6">
-                      <h3 className="text-lg sm:text-xl font-bold mb-1 text-white">{leader.name}</h3>
-                      <p className="text-base sm:text-lg text-yellow-500 mb-3 sm:mb-4">{leader.englishName}</p>
+                      <h3 className="text-lg sm:text-xl font-bold mb-1 text-gray-900">{leader.name}</h3>
+                      <p className="text-base sm:text-lg text-amber-600 font-medium mb-3 sm:mb-4">{leader.englishName}</p>
                       <Button
                         onClick={() => setSelectedLeader(leader)}
                         variant="outline"
-                        className="w-full border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-bold transition-colors"
+                        className="w-full border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white font-bold transition-colors"
                       >
                         Read More
                       </Button>
@@ -138,8 +138,8 @@ export function KeyLeadersSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-red-700 hover:bg-red-700" />
-            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-red-700 hover:bg-red-700" />
+            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
+            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
           </Carousel>
           
           {/* Carousel Indicators */}
@@ -150,8 +150,8 @@ export function KeyLeadersSection() {
                 onClick={() => api?.scrollTo(index)}
                 className={`transition-all duration-300 rounded-full ${
                   current === index
-                    ? "bg-red-700 w-3 h-3"
-                    : "bg-neutral-600 hover:bg-neutral-500 w-2 h-2"
+                    ? "bg-red-800 w-3 h-3"
+                    : "bg-amber-300 hover:bg-amber-400 w-2 h-2"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -160,10 +160,10 @@ export function KeyLeadersSection() {
         </div>
 
         <div className="text-center mt-10 sm:mt-12 max-w-4xl mx-auto px-4">
-          <p className="text-sm sm:text-base text-white/70 mb-2">
-            இந்த தலைவர்கள் தமிழ்நாட்டின் ஒவ்வொரு பகுதியிலும் சமூகநீதிக்கான கொள்கைகள், சமத்துவம் மற்றும் மனிதநேயத்தின் அடிப்படையில் பணியாற்ற நமக்கு ஆற்றல் அளிக்கின்றனர்.
+          <p className="text-sm sm:text-base text-gray-600 mb-2">
+            இந்த தலைவர்கள் தமிழ்நாட்டின் ஒவ்வொரு பகுதியிலும் சமூகநீதிக்கான கொள்கைகள், சமத்துவம் மற்றும் மனிதநேயத்தின் அடிப்படையில் பணியாற்ற நமக்கு ஆற்றல் அளிகின்றனர்.
           </p>
-          <p className="text-sm sm:text-base text-yellow-500/70 italic">
+          <p className="text-sm sm:text-base text-amber-700 italic font-medium">
             "These leaders inspire us to work for social justice, equality, and humanity across Tamil Nadu."
           </p>
         </div>
@@ -171,14 +171,14 @@ export function KeyLeadersSection() {
 
       {/* Leader Detail Modal */}
       <Dialog open={!!selectedLeader} onOpenChange={() => setSelectedLeader(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-black border-2 border-red-700 mx-2 sm:mx-4 p-4 sm:p-6 rounded-lg w-[calc(100%-1rem)] sm:w-auto">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white border-2 border-red-700 mx-2 sm:mx-4 p-4 sm:p-6 rounded-lg w-[calc(100%-1rem)] sm:w-auto">
           {selectedLeader && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-lg sm:text-2xl text-white text-center sm:text-left">
+                <DialogTitle className="text-lg sm:text-2xl text-gray-900 text-center sm:text-left">
                   {selectedLeader.name}
                   <br />
-                  <span className="text-base sm:text-xl text-yellow-500">{selectedLeader.englishName}</span>
+                  <span className="text-base sm:text-xl text-amber-600">{selectedLeader.englishName}</span>
                 </DialogTitle>
                 <DialogDescription className="sr-only">
                   Detailed information about {selectedLeader.englishName}
@@ -188,17 +188,17 @@ export function KeyLeadersSection() {
                 <img
                   src={selectedLeader.image}
                   alt={selectedLeader.englishName}
-                  className="w-full h-40 sm:h-64 object-cover border-2 border-neutral-800 rounded"
+                  className="w-full h-40 sm:h-64 object-cover border-2 border-amber-200 rounded"
                 />
-                <div className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-red-700 text-xs sm:text-sm text-white font-bold rounded">
+                <div className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-[#991B1B] text-xs sm:text-sm text-white font-bold rounded">
                   {selectedLeader.role}
                 </div>
                 <div className="space-y-2">
                   {selectedLeader.shortBio.map((bio, idx) => (
-                    <p key={idx} className="text-xs sm:text-base text-white/90 leading-relaxed">{bio}</p>
+                    <p key={idx} className="text-xs sm:text-base text-gray-800 leading-relaxed">{bio}</p>
                   ))}
                 </div>
-                <p className="text-xs sm:text-base text-yellow-500 italic border-l-4 border-yellow-500 pl-3 sm:pl-4">
+                <p className="text-xs sm:text-base text-amber-700 italic border-l-4 border-amber-500 pl-3 sm:pl-4">
                   {selectedLeader.englishBio}
                 </p>
               </div>

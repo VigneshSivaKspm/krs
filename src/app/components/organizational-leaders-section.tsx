@@ -42,26 +42,26 @@ const organizationalLeaders = [
 export function OrganizationalLeadersSection() {
 
   return (
-    <section id="organizational-leaders" className="py-16 sm:py-20 lg:py-24 bg-black">
+    <section id="organizational-leaders" className="py-16 sm:py-20 lg:py-24 bg-amber-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <div className="flex justify-center mb-4">
-            <span className="bg-red-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+            <span className="bg-[#991B1B] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Organization Leaders
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">
             தமிழக வெற்றி கழகத்தின் தலைவர்கள்
           </h2>
-          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-yellow-500 font-bold">TVK Leadership</p>
-          <div className="w-24 h-1 bg-red-700 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-800 font-bold">TVK Leadership</p>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 sm:mb-8"></div>
           
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 text-left px-4">
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
               தமிழக வெற்றி கழகத்தை வழிநடத்திச் செல்லும் நமது தலைவர்கள் மற்றும் ஒருங்கிணைப்பாளர்கள். இவர்களின் விமர்சனமான நேતৃத்வத்தின் கீழ் கழகம் வலிமையுடன் முன்னெடுத்து செல்கிறது.
             </p>
-            <p className="text-sm sm:text-base text-yellow-500 italic">
+            <p className="text-sm sm:text-base text-amber-700 italic font-medium">
               "Our visionary leaders and coordinators guide Tamilaga Vettri Kazhagam towards a better future. Under their stewardship, we work for the welfare of all Tamil people."
             </p>
           </div>
@@ -73,10 +73,10 @@ export function OrganizationalLeadersSection() {
             {organizationalLeaders.map((leader, index) => (
               <Card
                 key={index}
-                className="overflow-hidden bg-neutral-950 border-2 border-red-700/50 hover:border-red-500 transition-all duration-300 h-full flex flex-col"
+                className="overflow-hidden bg-white border-2 border-amber-200 hover:border-red-700 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
               >
                 {/* Image */}
-                <div className="aspect-square overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
+                <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center">
                   <img
                     src={leader.image}
                     alt={leader.name}
@@ -93,12 +93,12 @@ export function OrganizationalLeadersSection() {
                 </div>
 
                 {/* Position Badge */}
-                <div className="bg-gradient-to-r from-red-700 to-red-600 px-3 sm:px-4 py-2 overflow-hidden">
+                <div className="bg-gradient-to-r from-[#991B1B] to-red-700 px-3 sm:px-4 py-2 overflow-hidden">
                   <span className="text-white font-bold text-xs sm:text-sm block whitespace-nowrap animate-marquee">
                     {leader.position}
                   </span>
                   {leader.englishPosition && (
-                    <p className="text-white text-xs mt-1 opacity-90 block whitespace-nowrap animate-marquee">
+                    <p className="text-amber-200 text-xs mt-1 opacity-90 block whitespace-nowrap animate-marquee">
                       {leader.englishPosition}
                     </p>
                   )}
@@ -108,12 +108,12 @@ export function OrganizationalLeadersSection() {
                 <div className="px-3 sm:px-4 pb-3 flex-1 flex flex-col justify-between">
                   {/* Name */}
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white overflow-hidden">
+                    <h3 className="text-sm sm:text-base font-bold text-gray-900 overflow-hidden">
                       <span className="inline-block whitespace-nowrap animate-marquee">
                         {leader.name}
                       </span>
                     </h3>
-                    <p className="text-xs text-yellow-500 font-semibold line-clamp-1">
+                    <p className="text-xs text-amber-600 font-semibold line-clamp-1">
                       {leader.englishName}
                     </p>
                   </div>
@@ -125,10 +125,10 @@ export function OrganizationalLeadersSection() {
 
         {/* Footer Info */}
         <div className="text-center mt-10 sm:mt-12 max-w-4xl mx-auto px-4">
-          <p className="text-sm sm:text-base text-white/70 mb-2">
-            தமிழ் மக்களின் நலனுக்కும், வளர்ச்சிக்குமுந்தான் இவர்கள் பணிபுரிகிறார்கள்.
+          <p className="text-sm sm:text-base text-gray-600 mb-2">
+            தமிழ் மக்களின் நலனுக்கும், வளர்ச்சிக்குமுந்தான் இவர்கள் பணிபுரிகிறார்கள்.
           </p>
-          <p className="text-sm sm:text-base text-yellow-500/70 italic">
+          <p className="text-sm sm:text-base text-amber-700 italic font-medium">
             "Dedicated to the welfare and progress of Tamil people."
           </p>
         </div>

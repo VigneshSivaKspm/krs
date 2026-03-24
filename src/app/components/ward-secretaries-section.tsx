@@ -85,22 +85,22 @@ export function WardSecretariesSection() {
   };
 
   return (
-    <section id="ward-secretaries" className="py-16 sm:py-20 lg:py-24 bg-black">
+    <section id="ward-secretaries" className="py-16 sm:py-20 lg:py-24 bg-[#7F1D1D]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-white">
-            வார்டு செயலாளர்கள் & செயற்குழு
+            வார்டு செயலாளர்கள்
           </h2>
-          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-700 font-bold">Ward Secretaries & Executive Committee</p>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-amber-400 font-bold">Ward Secretaries</p>
+          <div className="w-24 h-1 bg-amber-400 mx-auto mb-6 sm:mb-8"></div>
           
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 text-left px-4">
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-              ஒவ்வொரு வார்டின் நலனுக்காகவும் அர்ப்பணிப்புடன் பணியாற்றும் நமது செயலாளர்கள் மற்றும் செயற்குழு உறுப்பினர்கள். உங்கள் குறைகளைத் தெரிவிக்கவோ, ஆலோசனைகள் பெறவோ அல்லது உதவி கோரவோ இவர்களை நேரடியாகத் தொடர்பு கொள்ளலாம்.
+            <p className="text-sm sm:text-base text-amber-100 leading-relaxed">
+              ஒவ்வொரு வார்டின் நலனுக்காகவும் அர்ப்பணிப்புடன் பணியாற்றும் நமது வார்டு செயலாளர்கள். உங்கள் குறைகளைத் தெரிவிக்கவோ, ஆலோசனைகள் பெறவோ அல்லது உதவி கோரவோ இவர்களை நேரடியாகத் தொடர்பு கொள்ளலாம்.
             </p>
-            <p className="text-sm sm:text-base text-yellow-500 italic">
-              "Our dedicated ward secretaries and executive committee members work tirelessly for the welfare of every ward. Please contact them directly to raise concerns, seek advice, or request assistance."
+            <p className="text-sm sm:text-base text-amber-300 italic font-medium">
+              "Our dedicated ward secretaries work tirelessly for the welfare of every ward. Please contact them directly to raise concerns, seek advice, or request assistance."
             </p>
           </div>
         </div>
@@ -115,9 +115,9 @@ export function WardSecretariesSection() {
             <CarouselContent className="-ml-2 md:-ml-4">
               {wardSecretaries.map((secretary, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden bg-neutral-950 border-2 border-neutral-800 hover:border-red-700 transition-colors h-full flex flex-col">
+                  <Card className="overflow-hidden bg-red-900/60 border-2 border-amber-400/30 hover:border-amber-400 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                     {/* Image */}
-                    <div className="aspect-square overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
+                    <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center">
                       <img
                         src={secretary.image}
                         alt={secretary.name}
@@ -125,13 +125,13 @@ export function WardSecretariesSection() {
                         onError={(e) => {
                           const img = e.target as HTMLImageElement;
                           img.style.display = "none";
-                          img.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-center"><div class="text-white"><div class="text-4xl mb-2">👤</div><p class="text-xs text-gray-400">Photo</p></div></div>';
+                          img.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-center"><div class="text-gray-500"><div class="text-4xl mb-2">👤</div><p class="text-xs text-gray-400">Photo</p></div></div>';
                         }}
                       />
                     </div>
 
                     {/* Ward Badge */}
-                    <div className="bg-gradient-to-r from-red-700 to-red-600 px-4 py-2">
+                    <div className="bg-gradient-to-r from-[#991B1B] to-red-700 px-4 py-2">
                       <span className="text-white font-bold text-base">{secretary.ward}</span>
                     </div>
 
@@ -140,16 +140,16 @@ export function WardSecretariesSection() {
                       {/* Name */}
                       <div>
                         <h3 className="text-base sm:text-lg font-bold text-white mb-1">{secretary.name}</h3>
-                        <p className="text-xs sm:text-sm text-yellow-500 font-semibold">{secretary.englishName}</p>
+                        <p className="text-xs sm:text-sm text-amber-300 font-semibold">{secretary.englishName}</p>
                         {secretary.fatherName && (
-                          <p className="text-xs text-white/60 mt-1">தந்தை: {secretary.fatherName}</p>
+                          <p className="text-xs text-amber-200/70 mt-1">தந்தை: {secretary.fatherName}</p>
                         )}
                       </div>
 
                       {/* Address */}
                       <div className="flex items-start gap-2">
-                        <div className="w-4 h-4 mt-1 flex-shrink-0 rounded-full bg-yellow-500/50"></div>
-                        <p className="text-xs sm:text-sm text-white/70">{secretary.address}</p>
+                        <div className="w-4 h-4 mt-1 flex-shrink-0 rounded-full bg-amber-500"></div>
+                        <p className="text-xs sm:text-sm text-amber-100">{secretary.address}</p>
                       </div>
 
                       {/* Phone Number */}
@@ -184,8 +184,8 @@ export function WardSecretariesSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-red-700 hover:bg-red-700" />
-            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-red-700 hover:bg-red-700" />
+            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
+            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
           </Carousel>
 
           {/* Carousel Indicators */}
@@ -196,8 +196,8 @@ export function WardSecretariesSection() {
                 onClick={() => api?.scrollTo(index)}
                 className={`transition-all duration-300 rounded-full ${
                   current === index
-                    ? "bg-red-700 w-3 h-3"
-                    : "bg-neutral-600 hover:bg-neutral-500 w-2 h-2"
+                    ? "bg-red-800 w-3 h-3"
+                    : "bg-amber-300 hover:bg-amber-400 w-2 h-2"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -207,10 +207,10 @@ export function WardSecretariesSection() {
 
         {/* Footer Info */}
         <div className="text-center mt-10 sm:mt-12 max-w-4xl mx-auto px-4">
-          <p className="text-sm sm:text-base text-white/70 mb-2">
+          <p className="text-sm sm:text-base text-amber-100 mb-2">
             உங்கள் பகுதியின் வளர்ச்சிக்கும், சமூக நீதிக்கும் பாடுபட நாங்கள் எப்போதும் தயாராக இருக்கிறோம்.
           </p>
-          <p className="text-sm sm:text-base text-yellow-500/70 italic">
+          <p className="text-sm sm:text-base text-amber-300 italic font-medium">
             "We are always committed to the development of your locality and the cause of social justice."
           </p>
         </div>

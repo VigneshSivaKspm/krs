@@ -64,26 +64,26 @@ export function LeadershipCommitteeSection() {
   };
 
   return (
-    <section id="leadership-committee" className="py-16 sm:py-20 lg:py-24 bg-black">
+    <section id="leadership-committee" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <div className="flex justify-center mb-4">
-             <span className="bg-yellow-500 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+             <span className="bg-amber-500 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                 Main Leadership
              </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">
             தலைமை நிர்வாகிகள்
           </h2>
-          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-700 font-bold">Core Leadership Team</p>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-red-800 font-bold">Core Leadership Team</p>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-6 sm:mb-8"></div>
           
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 text-left px-4">
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
               கழகத்தின் முக்கிய முடிவுகளை எடுக்கும் மற்றும் வழிநடத்தும் தலைமை நிர்வாகிகள். இவர்களின் வழிகாட்டுதலின் கீழ் கழகம் வீர நடை போடுகிறது.
             </p>
-            <p className="text-sm sm:text-base text-yellow-500 italic">
+            <p className="text-sm sm:text-base text-amber-700 italic font-medium">
               "The core leadership team that guides and governs our organization. Under their stewardship, we move forward with strength and vision."
             </p>
           </div>
@@ -95,9 +95,9 @@ export function LeadershipCommitteeSection() {
             <CarouselContent className="-ml-2 md:-ml-4">
               {leadershipMembers.map((member, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden bg-neutral-950 border-2 border-yellow-600/50 hover:border-yellow-500 transition-all duration-300 h-full flex flex-col">
+                  <Card className="overflow-hidden bg-white border-2 border-amber-300 hover:border-red-700 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                     {/* Image */}
-                    <div className="aspect-square overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 relative">
+                    <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 relative">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -118,23 +118,23 @@ export function LeadershipCommitteeSection() {
                     <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-3">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <ShieldCheck size={16} className="text-yellow-500" />
-                          <span className="text-xs font-bold text-yellow-500 uppercase tracking-wider">{member.role}</span>
+                          <ShieldCheck size={16} className="text-amber-500" />
+                          <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">{member.role}</span>
                         </div>
-                        <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{member.name}</h3>
-                        <p className="text-xs sm:text-sm text-red-500 font-semibold">{member.englishName}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                        <p className="text-xs sm:text-sm text-red-700 font-semibold">{member.englishName}</p>
                       </div>
 
                       {/* Address */}
                       <div className="flex items-start gap-2">
                         <div className="w-4 h-4 mt-1 flex-shrink-0 rounded-full bg-red-700"></div>
-                        <p className="text-xs sm:text-sm text-white/70">{member.address}</p>
+                        <p className="text-xs sm:text-sm text-gray-600">{member.address}</p>
                       </div>
 
                       {/* Phone Number */}
                       <div className="flex items-center gap-2">
                         <div className="w-4 h-4 flex-shrink-0">📞</div>
-                        <p className="text-xs sm:text-sm text-white font-medium">{member.phone}</p>
+                        <p className="text-xs sm:text-sm text-gray-900 font-medium">{member.phone}</p>
                       </div>
 
                       {/* Action Buttons */}
@@ -163,8 +163,8 @@ export function LeadershipCommitteeSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-yellow-500 hover:bg-yellow-600" />
-            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-yellow-500 hover:bg-yellow-600" />
+            <CarouselPrevious className="hidden md:flex absolute left-0 top-1/3 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
+            <CarouselNext className="hidden md:flex absolute right-0 top-1/3 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 border-2 border-red-800 text-red-800 hover:bg-red-800 hover:text-white" />
           </Carousel>
 
           {/* Carousel Indicators */}
@@ -175,8 +175,8 @@ export function LeadershipCommitteeSection() {
                 onClick={() => api?.scrollTo(index)}
                 className={`transition-all duration-300 rounded-full ${
                   current === index
-                    ? "bg-yellow-500 w-3 h-3"
-                    : "bg-neutral-600 hover:bg-neutral-500 w-2 h-2"
+                    ? "bg-red-800 w-3 h-3"
+                    : "bg-amber-300 hover:bg-amber-400 w-2 h-2"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

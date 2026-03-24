@@ -87,7 +87,7 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 h-16 sm:h-20 transition-all duration-300 bg-black border-b-2 border-red-700`}
+      className={`fixed top-0 left-0 right-0 z-50 h-16 sm:h-20 transition-all duration-300 bg-[#7F1D1D] border-b-4 border-amber-400 shadow-lg`}
       style={{backdropFilter: 'saturate(120%) blur(6px)'}}
     >
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,11 +105,11 @@ export function Navigation() {
             >
               <div className="flex items-baseline">
                  <span className="text-xl sm:text-3xl font-black leading-none">
-                  <span className="text-red-700">T</span>
-                  <span className="text-yellow-500">V</span>
-                  <span className="text-red-700">K</span>
+                  <span className="text-amber-400">T</span>
+                  <span className="text-white">V</span>
+                  <span className="text-amber-400">K</span>
                 </span>
-                <div className="text-xs sm:text-sm font-bold text-white tracking-wider">
+                <div className="text-xs sm:text-sm font-bold text-amber-200 tracking-wider ml-1">
                   Kasipalayam
                 </div>
               </div>
@@ -179,20 +179,20 @@ function HeaderAuthArea({ navItems, isInstallable, handleInstallClick, closeMobi
   return (
     <div className="hidden">
       {navItems.map((item) => (
-        <a key={item.label} href={item.href} onClick={closeMobile} className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">{item.label}</a>
+        <a key={item.label} href={item.href} onClick={closeMobile} className="px-4 py-2 text-sm lg:text-base text-amber-100 hover:text-amber-400 transition-colors font-medium">{item.label}</a>
       ))}
 
       {user ? (
         <div className="flex items-center gap-3">
-          <div className="text-sm text-neutral-300">Welcome,&nbsp;<span className="font-semibold text-white">{user.displayName || user.email?.split('@')[0]}</span></div>
-          <button onClick={handleLogout} className="px-3 py-2 bg-white/5 hover:bg-white/10 text-sm rounded-md">Logout</button>
+          <div className="text-sm text-amber-200">Welcome,&nbsp;<span className="font-semibold text-white">{user.displayName || user.email?.split('@')[0]}</span></div>
+          <button onClick={handleLogout} className="px-3 py-2 bg-white/10 hover:bg-white/20 text-sm rounded-md text-amber-100">Logout</button>
         </div>
       ) : (
-        <Link to="/login" className="px-4 py-2 text-sm lg:text-base text-white hover:text-yellow-500 transition-colors font-medium">Login</Link>
+        <Link to="/login" className="px-4 py-2 text-sm lg:text-base text-amber-100 hover:text-amber-400 transition-colors font-medium">Login</Link>
       )}
 
       {isInstallable && (
-        <Button onClick={handleInstallClick} className="ml-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded-full flex items-center gap-2"><Download size={16} />Install</Button>
+        <Button onClick={handleInstallClick} className="ml-2 bg-amber-400 hover:bg-amber-500 text-black font-bold px-4 py-2 rounded-full flex items-center gap-2"><Download size={16} />Install</Button>
       )}
     </div>
   );
@@ -201,7 +201,7 @@ function HeaderAuthArea({ navItems, isInstallable, handleInstallClick, closeMobi
 function MobileAuthArea({ isMobileMenuOpen, setIsMobileMenuOpen }:{isMobileMenuOpen:boolean, setIsMobileMenuOpen: (v:boolean)=>void, closeMobile?:()=>void}){
   return (
     <div className="flex">
-      <Button variant="ghost" size="icon" className="text-yellow-400 hover:text-yellow-300 bg-black/20 hover:bg-white/5 z-60" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu">
+      <Button variant="ghost" size="icon" className="text-amber-300 hover:text-amber-200 hover:bg-red-900/50 z-60" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu">
         {isMobileMenuOpen ? (<X className="w-6 h-6" />) : (<Menu className="w-6 h-6" />)}
       </Button>
     </div>

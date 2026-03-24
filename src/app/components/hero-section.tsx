@@ -1,7 +1,7 @@
 export function HeroSection() {
   return (
     <section 
-      className="relative w-full overflow-hidden bg-gradient-to-br from-slate-950 via-gray-900 to-black pt-0 sm:pt-4 lg:pt-8 pb-6 sm:pb-12 lg:pb-16"
+      className="relative w-full overflow-hidden bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 pt-0 sm:pt-4 lg:pt-8 pb-6 sm:pb-12 lg:pb-16"
       aria-label="K.R. Saravanakumar - TVK Town Panchayat Secretary Introduction"
       itemScope
       itemType="https://schema.org/Person"
@@ -9,8 +9,9 @@ export function HeroSection() {
       {/* Premium Background */}
       <div className="absolute inset-0 z-0">
         {/* Animated gradient blobs */}
-        <div className="absolute top-20 right-10 w-60 h-60 sm:w-80 sm:h-80 bg-red-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-60 h-60 sm:w-80 sm:h-80 bg-yellow-600/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-20 right-10 w-60 h-60 sm:w-80 sm:h-80 bg-red-600/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-60 h-60 sm:w-80 sm:h-80 bg-amber-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-yellow-300/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '4s'}}></div>
       </div>
 
       {/* Main Content */}
@@ -119,40 +120,40 @@ export function HeroSection() {
               
               <div className="flex flex-row items-center justify-center gap-8 sm:gap-16" aria-label="KRS - Kasipalayam Ramalingam Saravanakumar">
                 <div className="flex flex-col items-center gap-1">
-                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500" aria-hidden="true">
+                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600" aria-hidden="true">
                     K
                   </span>
-                  <span className="text-xs text-gray-400 font-medium">Kasipalayam</span>
+                  <span className="text-xs text-gray-600 font-medium">Kasipalayam</span>
                 </div>
                 
                 <div className="flex flex-col items-center gap-1">
-                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-400" aria-hidden="true">
+                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-500" aria-hidden="true">
                     R
                   </span>
-                  <span className="text-xs text-gray-400 font-medium">Ramalingam</span>
+                  <span className="text-xs text-gray-600 font-medium">Ramalingam</span>
                 </div>
                 
                 <div className="flex flex-col items-center gap-1">
-                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500" aria-hidden="true">
+                  <span className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600" aria-hidden="true">
                     S
                   </span>
-                  <span className="text-xs text-gray-400 font-medium" itemProp="givenName">Saravanakumar</span>
+                  <span className="text-xs text-gray-600 font-medium" itemProp="givenName">Saravanakumar</span>
                 </div>
               </div>
             </div>
             {/* Position Badge */}
             <div className="pt-1 sm:pt-2 flex justify-center px-2">
-              <div className="inline-flex items-center justify-center px-2 sm:px-4 py-1 sm:py-1.5 bg-red-700 rounded text-center">
+              <div className="inline-flex items-center justify-center px-2 sm:px-4 py-1 sm:py-1.5 bg-[#991B1B] rounded text-center shadow-lg">
                 <span className="text-xs sm:text-sm text-white font-semibold line-clamp-2" itemProp="jobTitle">பேரூராட்சி கழக செயலாளர் காசிபாளையம்</span>
               </div>
             </div>
             
             {/* Tagline */}
             <div className="space-y-2 sm:space-y-4 text-center lg:text-center">
-              <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
                 ஆட்சி அல்ல, அர்ப்பணிப்பு
               </h2>
-              <p className="text-sm sm:text-xl text-gray-300 font-light">
+              <p className="text-sm sm:text-xl text-gray-600 font-light">
                 Governance is Not Power, It is Responsibility
               </p>
             </div>

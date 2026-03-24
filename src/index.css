@@ -3,9 +3,9 @@
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: #ffffff;
-  background-color: #000000;
+  color-scheme: light;
+  color: #111827;
+  background-color: #FFFBEB;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,18 +15,18 @@
 
 a {
   font-weight: 500;
-  color: #FBC02D;
+  color: #991B1B;
   text-decoration: inherit;
 }
 a:hover {
-  color: #F59E0B;
+  color: #7F1D1D;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #000000;
+  background: #FFFBEB;
 }
 
 h1 {
@@ -41,17 +41,17 @@ button {
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
-  background-color: #B91C1C;
+  background-color: #991B1B;
   color: white;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 button:hover {
-  background-color: #991B1B;
+  background-color: #7F1D1D;
 }
 button:focus,
 button:focus-visible {
-  outline: 2px solid #FBC02D;
+  outline: 2px solid #F59E0B;
   outline-offset: 2px;
 }
 
@@ -61,20 +61,20 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #FEF3C7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B91C1C;
-  border-radius: 0;
+  background: #991B1B;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FBC02D;
+  background: #F59E0B;
 }
 
 /* Selection styling */
 ::selection {
-  background: #B91C1C;
-  color: #ffffff;
+  background: #F59E0B;
+  color: #111827;
 }
