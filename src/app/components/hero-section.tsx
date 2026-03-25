@@ -77,13 +77,13 @@ export function HeroSection() {
               </div>
               
               {/* Right Top - Pradeepkumar Image */}
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0 bg-gradient-to-br from-red-600/80 to-yellow-500/80 rounded-full">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex-shrink-0 bg-gradient-to-br from-red-600/80 to-yellow-500/80 rounded-full overflow-hidden">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
                   src="/assets/Pradeepkumar.png"
                   alt="Pradeepkumar - TVK Leader"
                   title="Pradeepkumar - Tamilaga Vettri Kazhagam"
-                  className="relative w-full h-full object-contain rounded-full border-2 border-red-600/30 shadow-xl"
+                  className="relative w-full h-full object-contain rounded-full border-2 border-red-600/30 shadow-xl scale-150 origin-top"
                   loading="eager"
                   width="300"
                   height="300"
