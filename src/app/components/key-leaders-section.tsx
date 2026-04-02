@@ -116,11 +116,11 @@ export function KeyLeadersSection() {
                         src={leader.image}
                         alt={`${leader.englishName} - ${leader.role} - Social Reformer and Political Ideological Leader - Tamilaga Vettri Kazhagam Inspiration`}
                         title={`${leader.englishName} - ${leader.role} - Historical Leader Inspiration for TVK`}
-                        className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\"
-                        width=\"300\"
-                        height=\"400\"
-                        decoding=\"async\"
-                        loading=\"lazy\"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        width="300"
+                        height="400"
+                        decoding="async"
+                        loading="lazy"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
                         <span className="inline-block px-3 py-1 bg-[#991B1B] text-xs sm:text-sm text-white font-bold rounded">
@@ -194,11 +194,11 @@ export function KeyLeadersSection() {
                   src={selectedLeader.image}
                   alt={`${selectedLeader.englishName} - ${selectedLeader.role} - Detailed View - Tamilaga Vettri Kazhagam Historical Leader`}
                   title={`${selectedLeader.englishName} - ${selectedLeader.role} - Ideological Inspiration for TVK`}
-                  className=\"w-full h-40 sm:h-64 object-cover border-2 border-amber-200 rounded\"
-                  width=\"500\"
-                  height=\"600\"
-                  decoding=\"async\"
-                  loading=\"lazy\"
+                  className="w-full h-40 sm:h-64 object-cover border-2 border-amber-200 rounded"
+                  width="500"
+                  height="600"
+                  decoding="async"
+                  loading="lazy"
                 />
                 <div className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-[#991B1B] text-xs sm:text-sm text-white font-bold rounded">
                   {selectedLeader.role}
@@ -219,3 +219,4 @@ export function KeyLeadersSection() {
     </section>
   );
 }
+

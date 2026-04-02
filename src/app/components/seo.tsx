@@ -222,9 +222,10 @@ export function generateImageSchema(imageUrl: string, imageName: string, personN
     "@type": "ImageObject",
     "url": imageUrl,
     "name": `${personName} - ${imageName}`,
-    "description": `Professional portrait of ${personName}, member of Tamilaga Vettri Kazhagam (TVK)",
+    "description": `Professional portrait of ${personName}, member of Tamilaga Vettri Kazhagam (TVK)`,
     "uploadDate": new Date().toISOString().split('T')[0]
   };
 }
 
 export default SEOContent;
+
