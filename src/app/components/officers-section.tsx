@@ -100,8 +100,13 @@ export function LeadershipCommitteeSection() {
                     <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 relative">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={`${member.englishName} - ${member.englishRole} - Tamilaga Vettri Kazhagam TVK Panchayat Officer - Tamil Nadu`}
+                        title={`${member.englishName} - ${member.englishRole} - TVK Leadership - ${member.address}`}
                         className="w-full h-full object-cover"
+                        width="300"
+                        height="300"
+                        decoding="async"
+                        loading="lazy"
                         onError={(e) => {
                           const img = e.target as HTMLImageElement;
                           img.style.display = "none";

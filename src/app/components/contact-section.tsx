@@ -12,9 +12,35 @@ export function ContactSection() {
           <div className="w-24 h-1 bg-amber-500 mx-auto mt-4 sm:mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-6xl mx-auto">
+          {/* Contact Person */}
+          <div className="flex items-center justify-center lg:order-2 order-1">
+            <div className="bg-gradient-to-br from-amber-50 to-red-50 border-2 border-amber-200 p-8 rounded-lg shadow-lg max-w-sm w-full text-center">
+              <div className="mb-6">
+                <img
+                  src="/assets/saravanan2.jpeg"
+                  alt="KR Saravanakumar B.Sc Computer Science - Contact Person - Tamilaga Vettri Kazhagam TVK - Tamil Nadu"
+                  title="KR Saravanakumar - B.Sc CS - Contact Representative - TVK Kasipalayam Office"
+                  className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-amber-500 shadow-md"
+                  width="128"
+                  height="128"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">KR Saravanakumar</h3>
+              <p className="text-sm font-semibold text-amber-700 mb-4">B.Sc Computer Science</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Dedicated to serving the community with transparency and dedication
+              </p>
+              <div className="border-t-2 border-amber-200 pt-4">
+                <p className="text-xs text-gray-500 italic">Committed to citizen engagement and community development</p>
+              </div>
+            </div>
+          </div>
+
           {/* Contact Info */}
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8 lg:order-1 order-2">
             <div className="bg-amber-50 border-2 border-amber-200 p-6 sm:p-8 rounded-lg shadow-sm">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4 sm:space-y-6">

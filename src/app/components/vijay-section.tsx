@@ -21,8 +21,13 @@ export function VijaySection() {
             <div className="flex items-center justify-center lg:sticky lg:top-20">
               <img
                 src="/assets/vijay.png"
-                alt="Thalapathy Vijay"
+                alt="Thalapathy Vijay - Founder Tamilaga Vettri Kazhagam TVK - Tamil Actor and Political Leader"
+                title="Thalapathy Vijay - TVK Founder - Tamilaga Vettri Kazhagam - Tamil Cinema Star and Political Leader"
                 className="w-full max-w-sm lg:max-w-md h-auto object-contain drop-shadow-2xl"
+                width="500"
+                height="600"
+                decoding="async"
+                loading="lazy"
               />
             </div>
           </div>

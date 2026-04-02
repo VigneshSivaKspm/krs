@@ -27,13 +27,14 @@ export function HeroSection() {
               <div className="bg-white px-4 sm:px-6 py-1 sm:py-2 rounded-lg">
                 <img 
                   src="/assets/text.png" 
-                  alt="Tamilaga Vettri Kazhagam TVK Logo - தமிழக வெற்றி கழகம்" 
-                  title="Tamilaga Vettri Kazhagam - TVK"
+                  alt="Tamilaga Vetri Kazhagam TVK Logo - தமிழக வெற்றி கழகம் - Political Party Logo" 
+                  title="Tamilaga Vetri Kazhagam - TVK - Tamil Nadu Political Party"
                   className="h-16 sm:h-20 w-auto object-contain"
                   loading="eager"
-                  width="200"
+                  width="240"
                   height="80"
-                />
+                  decoding="async"
+              />
               </div>
             </div>
 
@@ -53,12 +54,13 @@ export function HeroSection() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-500/15 to-red-600/15 blur-2xl"></div>
                 <img 
                   src="/assets/Aanandh.jpeg"
-                  alt="Anandha - TVK Leader"
-                  title="Anandha - Tamilaga Vettri Kazhagam"
+                  alt="Anandha - Tamilaga Vettri Kazhagam TVK Leader - Tamil Nadu Political Organization Member"
+                  title="Anandha - TVK Leadership Member - Tamilaga Vettri Kazhagam"
                   className="relative w-full h-full object-cover rounded-full border-2 border-red-600/30 shadow-xl"
                   loading="eager"
                   width="300"
                   height="300"
+                  decoding="async"
                 />
               </div>
               
@@ -67,12 +69,13 @@ export function HeroSection() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
                   src="/assets/K-A-Sengottayan.webp"
-                  alt="K.A. Sengottayan - TVK Leader"
-                  title="K.A. Sengottayan - Tamilaga Vettri Kazhagam"
+                  alt="K.A. Sengottayan - Chief Coordinator Tamilaga Vettri Kazhagam TVK - Tamil Nadu Political Leader"
+                  title="K.A. Sengottayan - TVK Chief Coordinator - Tamilaga Vettri Kazhagam Leadership"
                   className="relative w-full h-full object-cover rounded-full border-2 border-red-600/30 shadow-xl"
                   loading="eager"
                   width="300"
                   height="300"
+                  decoding="async"
                 />
               </div>
               
@@ -81,12 +84,13 @@ export function HeroSection() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600/15 to-yellow-500/15 blur-2xl"></div>
                 <img 
                   src="/assets/Pradeepkumar.png"
-                  alt="Pradeepkumar - TVK Leader"
-                  title="Pradeepkumar - Tamilaga Vettri Kazhagam"
+                  alt="A. Pradeep Kumar - Erode West District Secretary Tamilaga Vettri Kazhagam TVK - Tamil Nadu Political Organization"
+                  title="A. Pradeep Kumar - TVK Erode West District Secretary - Tamilaga Vettri Kazhagam Leadership"
                   className="relative w-full h-full object-contain rounded-full border-2 border-red-600/30 shadow-xl scale-150 origin-top"
                   loading="eager"
                   width="300"
                   height="300"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -100,13 +104,14 @@ export function HeroSection() {
               {/* Image */}
               <img 
                 src="/assets/saravanan.png"
-                alt="K.R. Saravanakumar (KRS) - TVK Town Panchayat Secretary Kasipalayam Gobichettipalayam Erode - சரவணகுமார்"
-                title="K.R. Saravanakumar - Saravanakumar - Saravanan - KRS - சரவணகுமார்"
+                alt="K.R. Saravanakumar - KRS - TVK Town Panchayat Secretary Kasipalayam Gobichettipalayam Erode District Tamil Nadu - சரவணகுமார் - Tamilaga Vettri Kazhagam"
+                title="K.R. Saravanakumar - KRS - Saravanakumar - Saravanan - சரவணகுமார் - TVK Political Leader Erode"
                 className="relative w-full h-full object-cover rounded-full border-2 border-red-600/30 shadow-2xl"
                 itemProp="image"
                 loading="eager"
                 width="400"
                 height="400"
+                decoding="async"
               />
             </div>
 

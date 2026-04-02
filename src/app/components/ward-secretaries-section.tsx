@@ -25,7 +25,25 @@ const wardSecretaries = [
     image: "/assets/Arun Siva.jpeg",
   },
   {
-    id: 6,
+    id: 3,
+    name: "பிரகாஷ்",
+    englishName: "Prakash",
+    ward: "Ward 4",
+    address: "ஓடக்காடு, காசிபாளையம், கோபிச்செட்டிபாளையம், ஈரோடு",
+    phone: "9791910246",
+    image: "/assets/prakash.jpeg",
+  },
+  {
+    id: 4,
+    name: "K. குணசேகர்",
+    englishName: "K. Gunasekhar",
+    ward: "Ward 5",
+    address: "பள்ளம் பாளையம் ரோடு, சக்தி நகர், கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
+    phone: "9360192177",
+    image: "/assets/gunasekaran.jpeg",
+  },
+  {
+    id: 5,
     name: "A. சுரேஷ்",
     englishName: "A. Suresh",
     ward: "Ward 6",
@@ -34,7 +52,16 @@ const wardSecretaries = [
     image: "/assets/A-Suresh.jpeg",
   },
   {
-    id: 8,
+    id: 6,
+    name: "சண்முகசுந்தரம் M",
+    englishName: "M. Sanmugasundaram",
+    ward: "Ward 7",
+    address: "12, நஞ்சை கவுண்டர் ஸ்ட்ரீட், கா.கணபதிபாளையம், காசிபாளையம் (P.O), கோபிச்செட்டிபாளையம் (T.K), ஈரோடு (D.T) – 638454",
+    phone: "9488839252",
+    image: "/assets/sanmugasundaram.jpeg",
+  },
+  {
+    id: 7,
     name: "R. சிவகுமார்",
     englishName: "R. Sivakumar",
     ward: "Ward 8",
@@ -44,13 +71,31 @@ const wardSecretaries = [
     image: "/assets/Sivakumar.jpeg",
   },
   {
-    id: 14,
+    id: 8,
+    name: "கோவ்ரிசங்கர்",
+    englishName: "Gowrishankar",
+    ward: "Ward 13",
+    address: "28 K பிள்ளையார் கோயில் வீதி, காசிபாளையம், கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
+    phone: "9360192177",
+    image: "/assets/gowrishankar.jpeg",
+  },
+  {
+    id: 9,
     name: "V. ரவி பிரசாந்த்",
     englishName: "V. Ravi Prasanth",
     ward: "Ward 14",
     address: "9/7, காளியப்பா தெரு, காசிபாளையம் (P.O), கோபி (T.K), ஈரோடு – 638454",
     phone: "8870229133",
     image: "/assets/Raviprasath.jpeg",
+  },
+  {
+    id: 10,
+    name: "மனோஜ்",
+    englishName: "Manoj",
+    ward: "Ward 15",
+    address: "மாரியம்மன் கோவில் வீதி, எரம்பாளையம், கோபிச்செட்டிபாளையம், ஈரோடு",
+    phone: "9360314140",
+    image: "/assets/manoj.jpeg",
   },
 ];
 
@@ -120,8 +165,13 @@ export function WardSecretariesSection() {
                     <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center">
                       <img
                         src={secretary.image}
-                        alt={secretary.name}
+                        alt={`${secretary.englishName} - ${secretary.ward} Secretary - Tamilaga Vettri Kazhagam TVK - Kasipalayam - ${secretary.address}`}
+                        title={`${secretary.englishName} - ${secretary.ward} Secretary - TVK - Contact: ${secretary.phone}`}
                         className="w-full h-full object-cover"
+                        width="300"
+                        height="300"
+                        decoding="async"
+                        loading="lazy"
                         onError={(e) => {
                           const img = e.target as HTMLImageElement;
                           img.style.display = "none";

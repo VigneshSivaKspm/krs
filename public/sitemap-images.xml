@@ -2,24 +2,181 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- TVK Kasipalayam Main Image -->
+  <!-- K.R. Saravanakumar - Main Hero, Vijay, and Logo Images -->
   <url>
     <loc>https://tvkkasipalayam.in/</loc>
     <image:image>
       <image:loc>https://tvkkasipalayam.in/assets/saravanan.png</image:loc>
-      <image:title>TVK Kasipalayam - Tamilaga Vettri Kazhagam</image:title>
-      <image:caption>TVK Kasipalayam (தமிழக வெற்றி கழகம்) - Kasipalayam, Gobichettipalayam, Erode District, Tamil Nadu</image:caption>
+      <image:title>K.R. Saravanakumar - TVK Town Panchayat Secretary - Kasipalayam, Gobichettipalayam, Erode - சரவணகுமார்</image:title>
+      <image:caption>K.R. Saravanakumar (KRS) - Tamilaga Vettri Kazhagam (TVK) Town Panchayat Secretary, Kasipalayam, Gobichettipalayam, Erode District, Tamil Nadu</image:caption>
       <image:geo_location>Kasipalayam, Gobichettipalayam, Erode, Tamil Nadu, India</image:geo_location>
     </image:image>
     <image:image>
       <image:loc>https://tvkkasipalayam.in/assets/vijay.png</image:loc>
-      <image:title>Thalapathy Vijay - TVK Founder and Leader</image:title>
-      <image:caption>Thalapathy Vijay - Founder of Tamilaga Vettri Kazhagam (TVK)</image:caption>
+      <image:title>Thalapathy Vijay - Founder Tamilaga Vettri Kazhagam TVK - Tamil Actor and Political Leader</image:title>
+      <image:caption>Thalapathy Vijay - Founder of Tamilaga Vettri Kazhagam (TVK) - Tamil Cinema Superstar and Political Leader</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://tvkkasipalayam.in/assets/text.png</image:loc>
-      <image:title>Tamilaga Vettri Kazhagam Logo</image:title>
-      <image:caption>TVK - Tamilaga Vettri Kazhagam Official Logo</image:caption>
+      <image:title>Tamilaga Vettri Kazhagam TVK Logo - தமிழக வெற்றி கழகம்</image:title>
+      <image:caption>Tamilaga Vettri Kazhagam (TVK) - Official Political Party Logo - Tamil Nadu</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Aanandh.jpeg</image:loc>
+      <image:title>N. Anandha - General Secretary - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>N. Anandha - General Secretary of Tamilaga Vettri Kazhagam (TVK)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/K-A-Sengottayan.webp</image:loc>
+      <image:title>K.A. Sengottayan - Chief Coordinator - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>K.A. Sengottayan - Chief Coordinator and West Zone Coordinator - Tamilaga Vettri Kazhagam (TVK)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Pradeepkumar.png</image:loc>
+      <image:title>A. Pradeep Kumar - Erode West District Secretary - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>A. Pradeep Kumar - Erode West District Secretary - Tamilaga Vettri Kazhagam (TVK)</image:caption>
+    </image:image>
+    
+    <!-- Organizational Leaders -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/M-Balaji.png</image:loc>
+      <image:title>M. Balaji - Erode Central District Secretary - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>M. Balaji - Erode Central District Secretary - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    
+    <!-- Officers Section - Panchayat Leadership -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/selvaraj.jpeg.jpeg</image:loc>
+      <image:title>D. Selvaraj - Panchayat Joint Secretary - TVK Kasipalayam</image:title>
+      <image:caption>D. Selvaraj - Panchayat Joint Secretary (பேரூராட்சி கழக இணைச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/murugesan.jpeg</image:loc>
+      <image:title>G. Murugesan - Panchayat Treasurer - TVK Kasipalayam</image:title>
+      <image:caption>G. Murugesan - Panchayat Treasurer (பேரூராட்சி பொருளாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/devemanohari.jpeg</image:loc>
+      <image:title>E. Devamanohari - Panchayat Deputy Secretary - TVK Kasipalayam</image:title>
+      <image:caption>E. Devamanohari - Panchayat Deputy Secretary (பேரூராட்சி துணை செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    
+    <!-- Executive Committee Members -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/senthilkumar.jpeg</image:loc>
+      <image:title>Senthilkumar - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>Senthilkumar - Executive Committee Member (செயற்குழு உறுப்பினர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Balakrishnan.jpeg</image:loc>
+      <image:title>R. Balakrishnan - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>R. Balakrishnan - Executive Committee Member - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Gokulsarathi.jpeg</image:loc>
+      <image:title>V. Gokulsarathi - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>V. Gokulsarathi - Executive Committee Member - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Abhirami.png</image:loc>
+      <image:title>Abhirami K - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>Abhirami K - Executive Committee Member - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/ArunPrasath.png</image:loc>
+      <image:title>C. Arun Prasath - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>C. Arun Prasath - Executive Committee Member - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/venkatesh.jpeg</image:loc>
+      <image:title>Venkatesh - Executive Committee Member - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>Venkatesh - Executive Committee Member - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    
+    <!-- Ward Secretaries - All Wards -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Yuvaraj.jpeg</image:loc>
+      <image:title>D. Yuvaraj - Ward 1 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>D. Yuvaraj - Ward 1 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Arun Siva.jpeg</image:loc>
+      <image:title>Gna. Arun Siva - Ward 2 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>Gna. Arun Siva - Ward 2 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/prakash.jpeg</image:loc>
+      <image:title>Prakash - Ward 4 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>Prakash - Ward 4 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/gunasekaran.jpeg</image:loc>
+      <image:title>K. Gunasekhar - Ward 5 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>K. Gunasekhar - Ward 5 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/A-Suresh.jpeg</image:loc>
+      <image:title>A. Suresh - Ward 6 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>A. Suresh - Ward 6 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/sanmugasundaram.jpeg</image:loc>
+      <image:title>M. Sanmugasundaram - Ward 7 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>M. Sanmugasundaram - Ward 7 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Sivakumar.jpeg</image:loc>
+      <image:title>R. Sivakumar - Ward 8 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>R. Sivakumar - Ward 8 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/gowrishankar.jpeg</image:loc>
+      <image:title>Gowrishankar - Ward 13 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>Gowrishankar - Ward 13 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/Raviprasath.jpeg</image:loc>
+      <image:title>V. Ravi Prasanth - Ward 14 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>V. Ravi Prasanth - Ward 14 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/manoj.jpeg</image:loc>
+      <image:title>Manoj - Ward 15 Secretary - TVK Kasipalayam</image:title>
+      <image:caption>Manoj - Ward 15 Secretary (வார்டு பொதுச் செயலாளர்) - Tamilaga Vettri Kazhagam</image:caption>
+    </image:image>
+    
+    <!-- Historical Leaders for Ideology Section -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/leaders/ambedkar.jpg</image:loc>
+      <image:title>Dr. B.R. Ambedkar - Father of Indian Constitution - Social Reformer</image:title>
+      <image:caption>Dr. B.R. Ambedkar - Ideological Inspiration for Tamilaga Vettri Kazhagam - Father of the Indian Constitution</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/leaders/evrperiyar.webp</image:loc>
+      <image:title>Periyar E.V. Ramasamy - Social Reformer and Dravidian Movement Leader</image:title>
+      <image:caption>Periyar E.V. Ramasamy - Ideological Inspiration for Tamilaga Vettri Kazhagam - Tamil Social Reformer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/leaders/kamarajar.jpg</image:loc>
+      <image:title>K. Kamaraj - Education Reformer and Political Leader</image:title>
+      <image:caption>K. Kamaraj - Ideological Inspiration for Tamilaga Vettri Kazhagam - Tamil Nadu Education Reformer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/leaders/velunachiyar.jpg</image:loc>
+      <image:title>Velu Nachiyar - First Queen to Fight British Rule - Women's Empowerment</image:title>
+      <image:caption>Velu Nachiyar - Ideological Inspiration for Tamilaga Vettri Kazhagam - First Female Freedom Fighter</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/leaders/anjalaiammal.jpg</image:loc>
+      <image:title>Anjalai Ammal - Women's Rights Advocate</image:title>
+      <image:caption>Anjalai Ammal - Ideological Inspiration for Tamilaga Vettri Kazhagam - Women's Rights Pioneer</image:caption>
+    </image:image>
+    
+    <!-- Contact Section -->
+    <image:image>
+      <image:loc>https://tvkkasipalayam.in/assets/saravanan2.jpeg</image:loc>
+      <image:title>KR Saravanakumar B.Sc CS - Contact Representative - Tamilaga Vettri Kazhagam TVK</image:title>
+      <image:caption>KR Saravanakumar - B.Sc Computer Science - Contact Representative for Tamilaga Vettri Kazhagam (TVK) Kasipalayam Office</image:caption>
     </image:image>
   </url>
   

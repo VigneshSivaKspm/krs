@@ -26,8 +26,14 @@ export const SEO_CONFIG = {
     locality: 'Kasipalayam, Gobichettipalayam',
     region: 'Tamil Nadu',
     postalCode: '638454',
-    country: 'India'
-  }
+    country: 'India',
+    coordinates: {
+      latitude: 11.4539,
+      longitude: 77.4374
+    }
+  },
+  defaultImageWidth: 1200,
+  defaultImageHeight: 800
 };
 
 // Alternative names for search visibility
@@ -114,7 +120,12 @@ export function generatePersonSchema() {
     "name": "K.R. Saravanakumar",
     "alternateName": ALTERNATE_NAMES,
     "description": SEO_CONFIG.defaultDescription,
-    "image": `${SEO_CONFIG.siteUrl}${SEO_CONFIG.defaultImage}`,
+    "image": {
+      "@type": "ImageObject",
+      "url": `${SEO_CONFIG.siteUrl}${SEO_CONFIG.defaultImage}`,
+      "width": SEO_CONFIG.defaultImageWidth,
+      "height": SEO_CONFIG.defaultImageHeight
+    },
     "url": SEO_CONFIG.siteUrl,
     "telephone": SEO_CONFIG.phone,
     "email": SEO_CONFIG.email,
@@ -131,6 +142,88 @@ export function generatePersonSchema() {
       "postalCode": SEO_CONFIG.address.postalCode,
       "addressCountry": "IN"
     }
+  };
+}
+
+// Generate LocalBusiness Schema
+export function generateLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TVK Kasipalayam - Tamilaga Vettri Kazhagam",
+    "description": "Official local office and headquarters of Tamilaga Vettri Kazhagam (TVK) political party in Kasipalayam, Gobichettipalayam, Erode District, Tamil Nadu",
+    "image": `${SEO_CONFIG.siteUrl}${SEO_CONFIG.defaultImage}`,
+    "url": SEO_CONFIG.siteUrl,
+    "telephone": SEO_CONFIG.phone,
+    "email": SEO_CONFIG.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": SEO_CONFIG.address.street,
+      "addressLocality": SEO_CONFIG.address.locality,
+      "addressRegion": SEO_CONFIG.address.region,
+      "postalCode": SEO_CONFIG.address.postalCode,
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": SEO_CONFIG.address.coordinates.latitude,
+      "longitude": SEO_CONFIG.address.coordinates.longitude
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": SEO_CONFIG.phone,
+      "contactType": "Customer Service"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  };
+}
+
+// Generate Organization Schema
+export function generateOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tamilaga Vettri Kazhagam (TVK)",
+    "alternateName": ["TVK", "தமிழக வெற்றி கழகம்"],
+    "description": "Tamilaga Vettri Kazhagam is a Tamil Nadu based political organization working for social welfare and democratic values",
+    "url": SEO_CONFIG.siteUrl,
+    "logo": `${SEO_CONFIG.siteUrl}/assets/text.png`,
+    "image": `${SEO_CONFIG.siteUrl}${SEO_CONFIG.defaultImage}`,
+    "telephone": SEO_CONFIG.phone,
+    "email": SEO_CONFIG.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": SEO_CONFIG.address.street,
+      "addressLocality": SEO_CONFIG.address.locality,
+      "addressRegion": SEO_CONFIG.address.region,
+      "postalCode": SEO_CONFIG.address.postalCode,
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "K.R. Saravanakumar"
+    },
+    "sameAs": [
+      "https://www.facebook.com/tvkkasipalayam",
+      "https://www.youtube.com/tvkkasipalayam"
+    ]
+  };
+}
+
+// Image SEO Schema
+export function generateImageSchema(imageUrl: string, imageName: string, personName: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "url": imageUrl,
+    "name": `${personName} - ${imageName}`,
+    "description": `Professional portrait of ${personName}, member of Tamilaga Vettri Kazhagam (TVK)",
+    "uploadDate": new Date().toISOString().split('T')[0]
   };
 }
 

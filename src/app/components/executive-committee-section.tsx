@@ -7,22 +7,14 @@ import { Phone } from "lucide-react";
 const executiveMembers = [
   {
     id: 1,
-    name: "அபிராமி K",
-    englishName: "Abhirami K",
-    address: "W/o கருப்புசாமி, 4, ஈஸ்வரமூர்த்தி வீதி, காசிபாளையம் பேரூராட்சி, காசிபாளையம் (P.O), கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
-    phone: "+91 9489824024",
-    image: "/assets/Abhirami.png",
+    name: "செந்திலகுமார்",
+    englishName: "Senthilkumar",
+    address: "செந்திலகுமார், கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
+    phone: "+91 9360192177",
+    image: "/assets/senthilkumar.jpeg",
   },
   {
     id: 2,
-    name: "C. அருண் பிரசாத்",
-    englishName: "C. Arun Prasath",
-    address: "102/4, அரசு மேல்நிலைப் பள்ளி எதிரில், சத்தி–கோபி மெயின் ரோடு, காசிபாளையம் (P.O), கோபி (T.K), ஈரோடு (D.T) – 638454",
-    phone: "+91 9788319790",
-    image: "/assets/ArunPrasath.png",
-  },
-  {
-    id: 3,
     name: "R. பாலகிருஷ்ணன்",
     englishName: "R. Balakrishnan",
     address: "குமரன் கார்டு, காசிபாளையம்",
@@ -30,12 +22,36 @@ const executiveMembers = [
     image: "/assets/Balakrishnan.jpeg",
   },
   {
-    id: 4,
+    id: 3,
     name: "V. கோகுலசாரதி",
     englishName: "V. Gokulsarathi",
     address: "153/100, சத்தி மெயின் ரோடு, காசிபாளையம் (P.O), கோபி (T.K), ஈரோடு (D.T) – 638454",
     phone: "+91 8870290453",
     image: "/assets/Gokulsarathi.jpeg",
+  },
+  {
+    id: 4,
+    name: "அபிராமி K",
+    englishName: "Abhirami K",
+    address: "W/o கருப்புசாமி, 4, ஈஸ்வரமூர்த்தி வீதி, காசிபாளையம் பேரூராட்சி, காசிபாளையம் (P.O), கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
+    phone: "+91 9489824024",
+    image: "/assets/Abhirami.png",
+  },
+  {
+    id: 5,
+    name: "C. அருண் பிரசாத்",
+    englishName: "C. Arun Prasath",
+    address: "102/4, அரசு மேல்நிலைப் பள்ளி எதிரில், சத்தி–கோபி மெயின் ரோடு, காசிபாளையம் (P.O), கோபி (T.K), ஈரோடு (D.T) – 638454",
+    phone: "+91 9788319790",
+    image: "/assets/ArunPrasath.png",
+  },
+  {
+    id: 6,
+    name: "வெங்கடேஷ்",
+    englishName: "Venkatesh",
+    address: "வி. வெங்கடேஷ், கோபிச்செட்டிபாளையம், ஈரோடு – 638454",
+    phone: "+91 9360314140",
+    image: "/assets/venkatesh.jpeg",
   },
 ];
 
@@ -98,8 +114,13 @@ export function ExecutiveCommitteeSection() {
                     <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={`${member.englishName} - Executive Committee Member - Tamilaga Vettri Kazhagam TVK - ${member.address}`}
+                        title={`${member.englishName} - Executive Committee Member - TVK - Contact: ${member.phone}`}
                         className="w-full h-full object-cover"
+                        width="300"
+                        height="300"
+                        decoding="async"
+                        loading="lazy"
                         onError={(e) => {
                           const img = e.target as HTMLImageElement;
                           img.style.display = "none";

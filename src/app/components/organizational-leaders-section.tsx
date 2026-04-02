@@ -79,8 +79,13 @@ export function OrganizationalLeadersSection() {
                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center">
                   <img
                     src={leader.image}
-                    alt={leader.name}
+                    alt={`${leader.englishName} - ${leader.englishPosition} - Tamilaga Vettri Kazhagam TVK - Tamil Nadu Political Organization Leadership`}
+                    title={`${leader.englishName} - ${leader.englishPosition} - TVK Organizational Leader`}
                     className="w-full h-full object-cover"
+                    width="250"
+                    height="250"
+                    decoding="async"
+                    loading="lazy"
                     onError={(e) => {
                       const img = e.target as HTMLImageElement;
                       img.style.display = "none";

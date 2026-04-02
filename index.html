@@ -51,8 +51,16 @@
     <meta name="twitter:image" content="https://tvkkasipalayam.in/assets/saravanan.png" />
     <meta name="twitter:image:alt" content="K.R. Saravanakumar - TVK Leader" />
     <meta name="twitter:creator" content="@krsaravanakumar" />
-    <meta name="twitter:site" content="@krsaravanakumar" />
+    <meta name="twitter:site" content="@krsaravanakumar" />    
+    <!-- Image Meta Tags for SEO -->
+    <meta property=\"og:image:secure_url\" content=\"https://tvkkasipalayam.in/assets/saravanan.png\" />
+    <meta property=\"og:image:type\" content=\"image/png\" />
     
+    <!-- Additional Image Elements for Carousel -->
+    <meta property=\"og:image\" content=\"https://tvkkasipalayam.in/assets/vijay.png\" />
+    <meta property=\"og:image\" content=\"https://tvkkasipalayam.in/assets/K-A-Sengottayan.webp\" />
+    <meta property=\"og:image\" content=\"https://tvkkasipalayam.in/assets/Aanandh.jpeg\" />
+    <meta property=\"og:image\" content=\"https://tvkkasipalayam.in/assets/Pradeepkumar.png\" />    
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#b91c1c" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -89,8 +97,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />    
+    <!-- Preload Critical Images for Performance -->
+    <link rel=\"preload\" as=\"image\" href=\"/assets/saravanan.png\" type=\"image/png\" />
+    <link rel=\"preload\" as=\"image\" href=\"/assets/vijay.png\" type=\"image/png\" />
+    <link rel=\"preload\" as=\"image\" href=\"/assets/text.png\" type=\"image/png\" />
     
+    <!-- Prefetch Additional Resources -->
+    <link rel=\"prefetch\" href=\"/public/manifest.json\" />
+    <link rel=\"prefetch\" href=\"/sw.js\" />    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
